@@ -1,16 +1,14 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import React from "react"
 import PropTypes from "prop-types"
+import { Global, css } from "@emotion/core"
+import { ThemeProvider } from "emotion-theming"
 import { useStaticQuery, graphql } from "gatsby"
 
+import { theme } from "./utilities"
 import Header from "./header"
-import "./layout.css"
+
+import { Text } from "rebass"
+import { Styles } from "./styles"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -24,7 +22,18 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
+    <ThemeProvider theme={theme}>
+      <Global
+        styles={theme => css`
+          html,
+          body {
+            font-family: ${theme.fonts.text};
+            background: ${theme.colors.white};
+            color: ${theme.colors.darkPurple};
+            margin: 0;
+          }
+        `}
+      />
       <Header siteTitle={data.site.siteMetadata.title} />
       <div
         style={{
@@ -33,6 +42,7 @@ const Layout = ({ children }) => {
           padding: `0 1.0875rem 1.45rem`,
         }}
       >
+      <Styles></Styles>
         <main>{children}</main>
         <footer>
           © {new Date().getFullYear()}, Built with
@@ -40,7 +50,7 @@ const Layout = ({ children }) => {
           <a href="https://www.gatsbyjs.org">Gatsby</a>
         </footer>
       </div>
-    </>
+    </ThemeProvider>
   )
 }
 
