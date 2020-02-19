@@ -27,7 +27,7 @@ export const DarkText1 = props => (
 )
 
 export const PurpleText1 = props => (
-  <Text fontSize={[1, 2, 3]} lineHeight="1.15" color="purple" {...props}>
+  <Text fontSize={[1, 2, 3]} lineHeight="1.15" color="purple" fontWeight="body" {...props}>
     {props.children}
   </Text>
 )

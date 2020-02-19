@@ -10,7 +10,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`Open Sans`, `Heebo`, `Gill Sans\:400,600`],
+        fonts: [`Open Sans`, `Heebo`, `Gill Sans\:300,400,600`],
         display: "swap",
       },
     },
