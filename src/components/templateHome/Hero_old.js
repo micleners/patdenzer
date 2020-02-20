@@ -4,7 +4,7 @@
 // import Img from "gatsby-image"
 // import { Flex, Text, Image } from "rebass"
 
-// import { HomeHero } from "../molecules"
+// // import { HomeHero } from "../molecules"
 
 
 

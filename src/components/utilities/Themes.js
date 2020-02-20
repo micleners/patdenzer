@@ -7,7 +7,7 @@ export const theme = {
     darkPurple: "#4A2B7E",
     yellow: "#F4D786",
     blue: "#4181C2",
-    overlay: "background: rgba(255, 255, 255, 0.85);",
+    overlay: "rgba(255, 255, 255, 0.85)",
     black: "#000000",
     white: "#FFFFFF",
     grey: "#F4F4F4",

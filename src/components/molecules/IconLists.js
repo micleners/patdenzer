@@ -16,14 +16,24 @@ const icons = {
 }
 
 export const HomePurpleIcon = props => (
-  <Flex flexDirection="row" alignItems="center" my={5}>
+  <Flex
+    flexDirection="row"
+    alignItems="center"
+    my={[1, 4, 4]}
+    // width={[1, 1 / 2, "auto"]}
+  >
     <Image
       mr={3}
       src={icons[props.icon]}
       alt={`${props.icon} icon`}
-      width={["50px", "75px"]}
+      minWidth={["50px", "75px", "75px"]}
+      maxWidth={["50px", "75px", "75px"]}
     />
-    <PurpleText1 pb={["1", "2", "2"]} width="200px">
+    <PurpleText1
+      p={["1", "2", "2"]}
+      width={["auto", "200px", "200px"]}
+      backgroundColor="rgba(235, 235, 237, 0.5)"
+    >
       {props.text}
     </PurpleText1>
   </Flex>

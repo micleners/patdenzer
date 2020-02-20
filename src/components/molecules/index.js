@@ -1,2 +1,2 @@
 export * from "./IconLists"
-export * from "./HomeHero"
+export * from "./BgImage"
