@@ -20,7 +20,6 @@ export const HomePurpleIcon = props => (
     flexDirection="row"
     alignItems="center"
     my={[1, 4, 4]}
-    // width={[1, 1 / 2, "auto"]}
   >
     <Image
       mr={3}

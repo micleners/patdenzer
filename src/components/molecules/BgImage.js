@@ -1,9 +1,10 @@
 import React from "react"
 import PropTypes from "prop-types";
 import Img from "gatsby-image"
+import { Flex } from "rebass"
 import styled from "@emotion/styled"
 
-const Parent = styled.div`
+const Parent = styled(Flex)`
   position: relative;
   background-color: ${({ bc }) => bc};
 `
@@ -34,23 +35,15 @@ const Content = styled.div`
   width: 100%;
 `
 
-const BgImage = ({
-  fluid,
-  title,
-  height,
-  mobileHeight,
-  overlayColor,
-  children,
-  className,
-}) => (
-  <Parent bc={overlayColor}>
+const BgImage = (props) => (
+  <Parent bc={props.overlayColor} {...props}>
     <FakeBgImage
-      fluid={fluid}
-      title={title}
-      height={height}
-      mobileHeight={mobileHeight}
+      fluid={props.fluid}
+      title={props.title}
+      height={props.height}
+      mobileHeight={props.mobileHeight}
     />
-    <Content className={className}>{children}</Content>
+    <Content className={props.className}>{props.children}</Content>
   </Parent>
 )
 

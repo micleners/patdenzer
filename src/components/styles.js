@@ -9,7 +9,7 @@ import {
   DarkText2,
   BlueText2,
   TransparentCard,
-  BigLogoImage,
+  LogoImage,
 } from "./atoms"
 import { HomePurpleIcon } from "./molecules"
 import { Hero } from "./templateHome"
@@ -21,9 +21,7 @@ export const Styles = props => (
     <HomePurpleIcon icon="overwhelmed" text="Are you feeling overwhelmed?" />
     <HomePurpleIcon icon="sync" text="Are you feeling out of sync?" />
 
-    <Box backgroundColor="darkPurple">
-      <BigLogoImage />
-    </Box>
+
 
     <Hero></Hero>
 

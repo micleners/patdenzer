@@ -12,7 +12,7 @@ const icons = {
   small: SmallLogo,
 }
 
-export const BigLogoImage = props => (
+export const LogoImage = props => (
     <Image
       m={3}
       src={icons[props.icon || "big"]}
