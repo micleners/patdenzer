@@ -4,7 +4,8 @@ import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import { Flex, Box, Text, Image } from "rebass"
 import { SectionHeader } from "../atoms"
-import BgImage from "../molecules/BgImage"
+import BackgroundImage from "gatsby-background-image"
+// import BgImage from "../molecules/BgImage"
 import { HomeYellowIcon } from "../molecules"
 import { theme, StandardLayout } from "../utilities"
 import { AccomplishThisBy } from "../organisms"
@@ -21,33 +22,20 @@ export const TestimonialAmy = props => {
       }
     }
   `)
+
+  const backgroundFluidImageStack = [
+    data.placeholderImage.childImageSharp.fluid,
+    `linear-gradient(
+        170deg,
+        ${theme.colors.darkPurple},
+        ${theme.colors.darkPurple} 60%,
+        rgba(0, 0, 0, 0) 60%,
+        rgba(0, 0, 0, 0) 60%
+      )`,
+  ].reverse()
   return (
-    <>
-      <Box
-        sx={{
-          backgroundImage: `linear-gradient(
-      170deg,
-      ${theme.colors.darkPurple},
-      ${theme.colors.darkPurple} 60%,
-      ${theme.colors.white} 60%,
-      ${theme.colors.white} 60%
-    )`,
-          height: "200px",
-        //   position: "absolute",
-        }}
-      ></Box>
-      <BgImage
-        bci="linear-gradient(
-            170deg,
-            #4A2B7E,
-            #4A2B7E 20%,
-            #FFFFFF 20%,
-            #FFFFFF 40%,
-            #FFFFFF 60%,
-            #FFFFFF 60%
-        )"
-        fluid={data.placeholderImage.childImageSharp.fluid}
-      >
+    <BackgroundImage fluid={backgroundFluidImageStack}>
+      <Flex pt="200px">
         <Text>
           Pat joined my business to help me in a variety of ways. I was planning
           a product launch and knew I would need support with the entire
@@ -66,7 +54,7 @@ export const TestimonialAmy = props => {
           how she engages her audience, serves her clients, and shows up in the
           world. I thank God for her every day.
         </Text>
-      </BgImage>
-    </>
+      </Flex>
+    </BackgroundImage>
   )
 }
