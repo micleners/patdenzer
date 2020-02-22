@@ -4,29 +4,37 @@ import { PurpleText1, SectionHeader } from "../atoms"
 import { theme } from "../utilities"
 
 export const LookNoFurther = props => {
-  const [fullWidth, setFullWidth] = useState(window ? window.innerWidth : 1000)
-  const [width, setWidth] = useState(window ? window.innerWidth : 1000)
+  const [fullWidth, setFullWidth] = useState()
+  const [width, setWidth] = useState()
 
   useEffect(() => {
-    setWidth((window ? window.innerWidth : 1000) - 300)
-    const handleResize = () =>
+    try {
       setWidth((window ? window.innerWidth : 1000) - 300)
-    if (window) {
-      window.addEventListener("resize", handleResize)
-      return () => {
-        window.removeEventListener("resize", handleResize)
+      const handleResize = () =>
+        setWidth((window ? window.innerWidth : 1000) - 300)
+      if (window) {
+        window.addEventListener("resize", handleResize)
+        return () => {
+          window.removeEventListener("resize", handleResize)
+        }
       }
+    } catch (e) {
+      console.log(e)
     }
   })
 
   useEffect(() => {
-    setFullWidth(window ? window.innerWidth : 1000)
-    const handleResize = () => setFullWidth(window ? window.innerWidth : 1000)
-    if (window) {
-      window.addEventListener("resize", handleResize)
-      return () => {
-        window.removeEventListener("resize", handleResize)
+    try {
+      setFullWidth(window ? window.innerWidth : 1000)
+      const handleResize = () => setFullWidth(window ? window.innerWidth : 1000)
+      if (window) {
+        window.addEventListener("resize", handleResize)
+        return () => {
+          window.removeEventListener("resize", handleResize)
+        }
       }
+    } catch (e) {
+      console.log(e)
     }
   })
 
