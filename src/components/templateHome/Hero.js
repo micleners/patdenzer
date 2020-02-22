@@ -27,14 +27,17 @@ export const Hero = () => {
         fluid={data.placeholderImage.childImageSharp.fluid}
         title="astronaut"
         height="600px"
-        flexDirection="row"
       >
-        {/* <StandardLayout> */}
-        <StandardLayout
-
-          padding="0 0 0 2%"
+        <Flex
+          flexDirection={["column-reverse", "row", "row"]}
+          justifyContent="space-between"
+          alignItems="center"
+          height="100%"
+          p={["0", "0 0 0 2%"]}
+          m="0 0 0 0"
+          maxWidth="auto"
         >
-          <Flex flexDirection={["row", "row", "column"]}>
+          <Flex flexDirection="column" alignItems="space-between">
             <HomePurpleIcon icon="growth" text="Is your business growing?" />
             <HomePurpleIcon
               icon="bogged"
@@ -45,9 +48,14 @@ export const Hero = () => {
               text="Are you feeling overwhelmed?"
             />
             <HomePurpleIcon icon="sync" text="Are you feeling out of sync?" />
-            <HomeLogo />
           </Flex>
-        </StandardLayout>
+          <HomeLogo
+            width={["100%", "300px", "300px"]}
+            boxSizing="border-box"
+            p={3}
+            height={["auto", "100%"]}
+          />
+        </Flex>
       </BgImage>
     </>
   )

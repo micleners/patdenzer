@@ -33,6 +33,7 @@ export const SectionHeader = props => (
     fontSize={[4, 5, 5]}
     letterSpacing="0.01em"
     lineHeight="1.35"
+    fontWeight="light"
     color="darkPurple"
     {...props}
   >
@@ -54,7 +55,13 @@ export const WhiteSectionHeader = props => (
 )
 
 export const HeavyPurpleHeader = props => (
-  <Text fontWeight="600" fontSize={[3, 4, 4]} lineHeight="1.15" color="purple" {...props}>
+  <Text
+    fontWeight="600"
+    fontSize={[3, 4, 4]}
+    lineHeight="1.15"
+    color="purple"
+    {...props}
+  >
     {props.children}
   </Text>
 )

@@ -1,9 +1,16 @@
-import React from 'react';
-import { Box } from "rebass"
-import { LogoImage } from "../atoms"
+import React from "react"
+import { Flex,Image } from "rebass"
+import BigLogo from "../../images/big-logo.svg"
 
-export const HomeLogo = () => (
-  <Box backgroundColor="darkPurple" width={1/4}>
-    <LogoImage />
-  </Box>
+export const HomeLogo = props => (
+  <Flex backgroundColor="darkPurple" {...props}>
+    <Image
+      src={BigLogo}
+      alt="big logo"
+      width={["300px", "100%", "100%"]}
+      height="auto"
+      mb="auto"
+      mx="auto"
+    />
+  </Flex>
 )

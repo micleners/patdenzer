@@ -14,9 +14,10 @@ const icons = {
 
 export const LogoImage = props => (
     <Image
-      m={3}
       src={icons[props.icon || "big"]}
       alt={`${props.icon || "big"} icon`}
-      width="400px"
+      width={["300px", "100%", "100%"]}
+      height="auto"
+      {...props}
     />
 )

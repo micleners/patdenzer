@@ -1,32 +1,27 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
+import { LogoImage, PurpleText1 } from "../components/atoms"
+import { Flex, Text, Box } from "rebass"
 import React from "react"
 
 const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
+  <header>
+    <Flex px={2} bg="white" justifyContent="space-between" alignItems="center">
+      <LogoImage icon="small" height="70px" width="auto" />
+      <Flex ml="auto" alignItems="center">
+        <PurpleText1 color="darkPurple" p={2} fontWeight="bold">
+          Rebass
+        </PurpleText1>
         <Link
-          to="/"
-          style={{
-            color: `white`,
+          sx={{
             textDecoration: `none`,
           }}
+          to="#!"
         >
-          {siteTitle}
+          Profile
         </Link>
-      </h1>
-    </div>
+      </Flex>
+    </Flex>
   </header>
 )
 

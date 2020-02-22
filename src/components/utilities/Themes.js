@@ -15,13 +15,14 @@ export const theme = {
   },
   space: [0, 4, 8, 16, 32, 64, 128, 256],
   fontWeights: {
+    light: 200,
     body: 300,
     heading: 600,
     bold: 700,
   },
   fonts: {
-    text: 'Gill Sans, Arial, System-ui, sans-serif',
-    heading: 'gill-sans, arial, system-ui, sans-serif',
+    text: 'Lato, Arial, System-ui, sans-serif',
+    heading: 'Lato, arial, system-ui, sans-serif',
   },
   borderRadius: '20px',
   lineHeights: {

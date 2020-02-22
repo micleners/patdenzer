@@ -15,7 +15,6 @@ const FakeBgImage = styled(Img)`
   left: 0;
   width: 100%;
   height: ${({ height }) => height};
-  /* z-index: -1; */
 
   & > img {
     object-fit: cover !important;
