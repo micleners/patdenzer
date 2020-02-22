@@ -4,24 +4,29 @@ import { PurpleText1, SectionHeader } from "../atoms"
 import { theme } from "../utilities"
 
 export const LookNoFurther = props => {
-  const [fullWidth, setFullWidth] = useState(window.innerWidth)
-  const [width, setWidth] = useState(window.innerWidth)
+  const [fullWidth, setFullWidth] = useState(window ? window.innerWidth : 1000)
+  const [width, setWidth] = useState(window ? window.innerWidth : 1000)
 
   useEffect(() => {
-    setWidth(window.innerWidth - 300)
-    const handleResize = () => setWidth(window.innerWidth - 300)
-    window.addEventListener("resize", handleResize)
-    return () => {
-      window.removeEventListener("resize", handleResize)
+    setWidth((window ? window.innerWidth : 1000) - 300)
+    const handleResize = () =>
+      setWidth((window ? window.innerWidth : 1000) - 300)
+    if (window) {
+      window.addEventListener("resize", handleResize)
+      return () => {
+        window.removeEventListener("resize", handleResize)
+      }
     }
   })
 
   useEffect(() => {
-    setFullWidth(window.innerWidth)
-    const handleResize = () => setFullWidth(window.innerWidth)
-    window.addEventListener("resize", handleResize)
-    return () => {
-      window.removeEventListener("resize", handleResize)
+    setFullWidth(window ? window.innerWidth : 1000)
+    const handleResize = () => setFullWidth(window ? window.innerWidth : 1000)
+    if (window) {
+      window.addEventListener("resize", handleResize)
+      return () => {
+        window.removeEventListener("resize", handleResize)
+      }
     }
   })
 
@@ -33,7 +38,11 @@ export const LookNoFurther = props => {
           width: "0",
           height: "0",
           borderStyle: "solid",
-          borderWidth: [`100px ${fullWidth}px 0 0`, `200px ${width}px 0 0`, `200px ${width}px 0 0`],
+          borderWidth: [
+            `100px ${fullWidth}px 0 0`,
+            `200px ${width}px 0 0`,
+            `200px ${width}px 0 0`,
+          ],
           borderColor: `${theme.colors.purple} transparent transparent transparent`,
         }}
       ></Box>
