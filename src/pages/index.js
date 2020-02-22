@@ -3,17 +3,22 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { Styles } from "../components/styles"
-import { Hero, LookNoFurther, PatDenzer, AssistMyClients } from "../components/templateHome"
-import { HomePurpleIcon } from "../components/molecules"
+import {
+  Hero,
+  LookNoFurther,
+  PatDenzer,
+  AssistMyClients,
+  TestimonialAmy,
+} from "../components/templateHome"
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <Hero />
-    <LookNoFurther/>
+    <LookNoFurther />
     <PatDenzer />
     <AssistMyClients />
-    <Styles></Styles>
+    <TestimonialAmy />
   </Layout>
 )
 

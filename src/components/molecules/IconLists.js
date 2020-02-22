@@ -47,7 +47,7 @@ export const HomePurpleIcon = props => (
 )
 
 export const HomeYellowIcon = props => (
-  <Flex flexDirection="column" alignItems="center" m={[2, 5, 5]} width="100px">
+  <Flex flexDirection="column" alignItems="center" m={[3, 5, 5]} width="100px">
     <Image
       src={icons[props.icon]}
       alt={`${props.icon} icon`}

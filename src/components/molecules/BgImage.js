@@ -1,12 +1,24 @@
 import React from "react"
-import PropTypes from "prop-types";
+import PropTypes from "prop-types"
 import Img from "gatsby-image"
 import { Flex } from "rebass"
+import { theme } from "../utilities"
 import styled from "@emotion/styled"
 
 const Parent = styled(Flex)`
   position: relative;
   background-color: ${({ bc }) => bc};
+  background-image: ${({ bci }) => bci};
+  backgroundimage: linear-gradient(
+    170deg,
+    ${props => props.theme.colors.darkPurple},
+    ${props => props.theme.colors.darkPurple} 20%,
+    ${props => props.theme.colors.white} 20%,
+    ${props => props.theme.colors.white} 40%,
+    ${props => props.theme.colors.white} 60%,
+    ${props => props.theme.colors.white} 60%
+  );
+  z-index: 1;
 `
 
 const FakeBgImage = styled(Img)`
@@ -20,11 +32,17 @@ const FakeBgImage = styled(Img)`
     object-fit: cover !important;
     object-position: 0% 0% !important;
     font-family: "object-fit: cover !important; object-position: 0% 0% !important;";
+    z-index: 0;
   }
+/*
+  & > picture {
+    position: absolute;
+  } */
 
   @media screen and (max-width: 600px) {
     height: ${({ mobileHeight }) => mobileHeight};
   }
+  z-index: 0;
 `
 
 const Content = styled.div`
@@ -34,8 +52,8 @@ const Content = styled.div`
   width: 100%;
 `
 
-const BgImage = (props) => (
-  <Parent bc={props.overlayColor} {...props}>
+const BgImage = props => (
+  <Parent theme={theme} bc={props.overlayColor} {...props}>
     <FakeBgImage
       fluid={props.fluid}
       title={props.title}

@@ -28,7 +28,6 @@ const Layout = ({ children }) => {
           html,
           body {
             font-family: ${theme.fonts.text};
-            background: ${theme.colors.white};
             color: ${theme.colors.darkPurple};
             margin: 0;
           }

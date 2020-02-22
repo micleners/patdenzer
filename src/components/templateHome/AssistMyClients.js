@@ -18,13 +18,11 @@ export const AssistMyClients = props => (
       ${theme.colors.blue} 40%,
       ${theme.colors.purple} 40%,
       ${theme.colors.purple} 60%,
-      ${theme.colors.darkPurple} 60%,
-      ${theme.colors.darkPurple} 80%,
-      ${theme.colors.white} 80%
+      ${theme.colors.darkPurple} 60%
     )`,
     }}
   >
-    <StandardLayout flexDirection="column" pb="200px">
+    <StandardLayout flexDirection="column">
       <SectionHeader
         m={4}
         pt={4}

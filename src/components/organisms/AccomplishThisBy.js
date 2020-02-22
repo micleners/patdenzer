@@ -9,7 +9,7 @@ import { theme, StandardLayout } from "../utilities"
 
 export const AccomplishThisBy = props => {
   const TextBlock = ({ children }) => (
-    <Box p={[2, 3, 4]} pt={0}>
+    <Box p={[2, 3, 4]} py={["1", "2", "3"]}>
       <PurpleText1 lineHeight="1.5" color="darkPurple" fontWeight="light">
         {children}
       </PurpleText1>
@@ -19,7 +19,7 @@ export const AccomplishThisBy = props => {
     <Flex
       bg="overlay"
       p={[2, 3, 4]}
-      my={5}
+      my={3}
       flexDirection="column"
       sx={{ borderRadius: "10px" }}
     >
@@ -33,9 +33,10 @@ export const AccomplishThisBy = props => {
       </SectionHeader>
       <Box
         mx={3}
+        mt={2}
         sx={{
           display: "grid",
-          gridGap: 4,
+          gridGap: 1,
           gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
         }}
       >
