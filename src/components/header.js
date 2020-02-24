@@ -4,22 +4,30 @@ import { LogoImage, PurpleText1 } from "../components/atoms"
 import { Flex, Text, Box } from "rebass"
 import React from "react"
 
+const MenuLink = ({ location, children }) => (
+  <PurpleText1
+    as={Link}
+    color="purple"
+    p={2}
+    fontWeight="light"
+    sx={{
+      textDecoration: `none`,
+    }}
+    to={location}
+  >
+    {children}
+  </PurpleText1>
+)
 const Header = ({ siteTitle }) => (
   <header>
     <Flex px={2} bg="white" justifyContent="space-between" alignItems="center">
-      <LogoImage icon="small" height="70px" width="auto" />
+      <Link to="">
+        <LogoImage icon="small" height="70px" width="auto" />
+      </Link>
       <Flex ml="auto" alignItems="center">
-        <PurpleText1 color="darkPurple" p={2} fontWeight="bold">
-          Rebass
-        </PurpleText1>
-        <Link
-          sx={{
-            textDecoration: `none`,
-          }}
-          to="#!"
-        >
-          Profile
-        </Link>
+        <MenuLink location="/getting-started">Getting Started</MenuLink>
+        <MenuLink location="/services">Services</MenuLink>
+        <MenuLink location="/about">About</MenuLink>
       </Flex>
     </Flex>
   </header>

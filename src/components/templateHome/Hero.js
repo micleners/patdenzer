@@ -3,9 +3,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import { Flex, Box } from "rebass"
 
-import { styled } from "@emotion/styled"
 import BgImage from "../molecules/BgImage"
-import { StandardLayout } from "../utilities/StandardLayout"
 import { HomePurpleIcon, HomeLogo } from "../molecules"
 
 export const Hero = () => {
@@ -13,7 +11,7 @@ export const Hero = () => {
     query {
       placeholderImage: file(relativePath: { eq: "home-header-image.png" }) {
         childImageSharp {
-          fluid(maxWidth: 1000) {
+          fluid(maxWidth: 1400) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -37,7 +35,7 @@ export const Hero = () => {
           m="0 0 0 0"
           maxWidth="auto"
         >
-          <Flex flexDirection="column" alignItems="space-between">
+          <Flex flexDirection="column" alignItems="space-between" my={["3", "0"]}>
             <HomePurpleIcon icon="growth" text="Is your business growing?" />
             <HomePurpleIcon
               icon="bogged"

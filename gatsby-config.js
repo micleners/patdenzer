@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Pat Denzer VA`,
+    description: `Pat Denzer, Virtual Assistant. Creating flow for your business.`,
+    author: `Pat Denzer`,
   },
   plugins: [
     `gatsby-background-image`,

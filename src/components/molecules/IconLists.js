@@ -25,21 +25,22 @@ const icons = {
 }
 
 export const HomePurpleIcon = props => (
-  <Flex flexDirection="row" alignItems="center" my={[1, 4, 4]}>
+  <Flex flexDirection={["column", "row"]} alignItems="center" my={[2, 4, 4]}>
     <Image
       mr={3}
       src={icons[props.icon]}
       alt={`${props.icon} icon`}
-      minWidth={["50px", "75px", "75px"]}
-      maxWidth={["50px", "75px", "75px"]}
+      minWidth={["65px", "75px", "75px"]}
+      maxWidth={["65px", "75px", "75px"]}
     />
     <PurpleText1
       alignSelf="center"
       justifySelf="center"
       p={["1", "2", "2"]}
+      fontSize={2}
       mb={1}
       width={["auto", "200px", "200px"]}
-      backgroundColor="rgba(235, 235, 237, 0.5)"
+      backgroundColor={["none", "rgba(235, 235, 237, 0.5)"]}
     >
       {props.text}
     </PurpleText1>

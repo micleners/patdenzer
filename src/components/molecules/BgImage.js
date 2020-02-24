@@ -5,6 +5,8 @@ import { Flex } from "rebass"
 import { theme } from "../utilities"
 import styled from "@emotion/styled"
 
+import { below } from "../utilities"
+
 const Parent = styled(Flex)`
   position: relative;
   background-color: ${({ bc }) => bc};
@@ -27,6 +29,9 @@ const FakeBgImage = styled(Img)`
   left: 0;
   width: 100%;
   height: ${({ height }) => height};
+  ${below[600]`
+    display: none;
+  `}
 
   & > img {
     object-fit: cover !important;
@@ -34,10 +39,6 @@ const FakeBgImage = styled(Img)`
     font-family: "object-fit: cover !important; object-position: 0% 0% !important;";
     z-index: 0;
   }
-/*
-  & > picture {
-    position: absolute;
-  } */
 
   @media screen and (max-width: 600px) {
     height: ${({ mobileHeight }) => mobileHeight};

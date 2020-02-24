@@ -1,19 +1,14 @@
-import PropTypes from "prop-types"
-import React from "react"
+import React, { useEffect, useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
 import { Flex, Box, Text, Image } from "rebass"
-import { SectionHeader } from "../atoms"
 import BackgroundImage from "gatsby-background-image"
-// import BgImage from "../molecules/BgImage"
-import { HomeYellowIcon } from "../molecules"
-import { theme, StandardLayout } from "../utilities"
-import { AccomplishThisBy } from "../organisms"
+import { theme } from "../utilities"
+import { DarkText2 } from "../atoms"
 
 export const TestimonialAmy = props => {
   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "home-header-image.png" }) {
+      placeholderImage: file(relativePath: { eq: "amy_testimonial.png" }) {
         childImageSharp {
           fluid(maxWidth: 1000) {
             ...GatsbyImageSharpFluid
@@ -24,19 +19,53 @@ export const TestimonialAmy = props => {
   `)
 
   const backgroundFluidImageStack = [
+    `linear-gradient(#F4F4F6, #F4F4F6 50%, #E6E7E7 100%)`,
     data.placeholderImage.childImageSharp.fluid,
-    `linear-gradient(
-        170deg,
-        ${theme.colors.darkPurple},
-        ${theme.colors.darkPurple} 60%,
-        rgba(0, 0, 0, 0) 60%,
-        rgba(0, 0, 0, 0) 60%
-      )`,
   ].reverse()
+
+  const [fullWidth, setFullWidth] = useState()
+
+  useEffect(() => {
+    try {
+      setFullWidth(window ? window.innerWidth : 1000)
+      const handleResize = () => setFullWidth(window ? window.innerWidth : 1000)
+      if (window) {
+        window.addEventListener("resize", handleResize)
+        console.log(fullWidth)
+        return () => {
+          window.removeEventListener("resize", handleResize)
+        }
+      }
+    } catch (e) {
+      console.log(e)
+    }
+  })
+
   return (
-    <BackgroundImage fluid={backgroundFluidImageStack}>
-      <Flex pt="200px">
-        <Text>
+    <BackgroundImage
+      fluid={backgroundFluidImageStack}
+      style={{ backgroundPosition: "bottom", backgroundSize: "contain" }}
+    >
+      <Box
+        sx={{
+          position: "absolute",
+          width: "0",
+          height: "0",
+          borderStyle: "solid",
+          borderWidth: `${fullWidth / 5.67}px ${
+            fullWidth >= 0 ? fullWidth : 0
+          }px 0 0`,
+          borderColor: `${theme.colors.darkPurple} transparent transparent transparent`,
+        }}
+      ></Box>
+      <Flex
+        sx={{ paddingTop: `${fullWidth / 5.5}px` }}
+        flexDirection="column"
+        pr={5}
+        pl={5}
+        pb={["175px", "180px", "250px"]}
+      >
+        <DarkText2 fontSize={[0, 0, 1]} fontWeight="light">
           Pat joined my business to help me in a variety of ways. I was planning
           a product launch and knew I would need support with the entire
           process. While that product no longer exists, Pat made herself so
@@ -53,7 +82,13 @@ export const TestimonialAmy = props => {
           feel confident that Pat could support anyone who genuinely cares about
           how she engages her audience, serves her clients, and shows up in the
           world. I thank God for her every day.
-        </Text>
+        </DarkText2>
+        <DarkText2 fontSize={[0, 0, 1]} fontWeight="strong" pt={5}>
+          Amy Kazor
+        </DarkText2>
+        <DarkText2 fontSize={[0, 0, 1]} fontWeight="light">
+          CMVA, www.amykazor.com
+        </DarkText2>
       </Flex>
     </BackgroundImage>
   )
