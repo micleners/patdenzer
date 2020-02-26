@@ -30,6 +30,7 @@ export const Hero = () => {
         fluid={data.placeholderImage.childImageSharp.fluid}
         title="astronaut"
         height="600px"
+        fadeIn="false"
         preserveStackingContext="true"
         style={{ background: isRowBased ? "white" : "" }}
       >
