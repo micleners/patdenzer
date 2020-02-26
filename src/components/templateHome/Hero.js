@@ -3,9 +3,11 @@ import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import { Flex, Box } from "rebass"
 
+import { css, jsx } from "@emotion/core"
 import BgImage from "../molecules/BgImage"
 import BackgroundImage from "gatsby-background-image"
 import { HomePurpleIcon, HomeLogo } from "../molecules"
+import { below, useMediaQuery } from "../utilities"
 
 export const Hero = () => {
   const data = useStaticQuery(graphql`
@@ -20,12 +22,16 @@ export const Hero = () => {
     }
   `)
 
+  const isRowBased = useMediaQuery("(max-width: 600px)")
+
   return (
     <>
       <BackgroundImage
         fluid={data.placeholderImage.childImageSharp.fluid}
         title="astronaut"
         height="600px"
+        preserveStackingContext="true"
+        style={{ background: isRowBased ? "white" : "" }}
       >
         <Flex
           flexDirection={["column-reverse", "row", "row"]}
@@ -56,7 +62,6 @@ export const Hero = () => {
             width={["100%", "300px", "300px"]}
             boxSizing="border-box"
             p={3}
-            height={["auto"]}
           />
         </Flex>
       </BackgroundImage>
