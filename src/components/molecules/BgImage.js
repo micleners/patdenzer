@@ -41,7 +41,8 @@ const FakeBgImage = styled(Img)`
   }
 
   @media screen and (max-width: 600px) {
-    height: ${({ mobileHeight }) => mobileHeight};
+    /* height: ${({ mobileHeight }) => mobileHeight}; */
+    height: 1000px;
   }
   z-index: 0;
 `

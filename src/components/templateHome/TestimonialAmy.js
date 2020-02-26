@@ -66,7 +66,7 @@ export const TestimonialAmy = props => {
         pb={["175px", "180px", "250px"]}
       >
         <DarkText2 fontSize={[0, 0, 1]} fontWeight="light">
-          Pat joined my business to help me in a variety of ways. I was planning
+          "Pat joined my business to help me in a variety of ways. I was planning
           a product launch and knew I would need support with the entire
           process. While that product no longer exists, Pat made herself so
           valuable to my business that I found all kinds of other deliciousness
@@ -81,7 +81,7 @@ export const TestimonialAmy = props => {
           better than I could have anticipated with high attention to detail. I
           feel confident that Pat could support anyone who genuinely cares about
           how she engages her audience, serves her clients, and shows up in the
-          world. I thank God for her every day.
+          world. I thank God for her every day."
         </DarkText2>
         <DarkText2 fontSize={[0, 0, 1]} fontWeight="strong" pt={5}>
           Amy Kazor

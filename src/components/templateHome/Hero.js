@@ -4,6 +4,7 @@ import Img from "gatsby-image"
 import { Flex, Box } from "rebass"
 
 import BgImage from "../molecules/BgImage"
+import BackgroundImage from "gatsby-background-image"
 import { HomePurpleIcon, HomeLogo } from "../molecules"
 
 export const Hero = () => {
@@ -21,7 +22,7 @@ export const Hero = () => {
 
   return (
     <>
-      <BgImage
+      <BackgroundImage
         fluid={data.placeholderImage.childImageSharp.fluid}
         title="astronaut"
         height="600px"
@@ -29,13 +30,17 @@ export const Hero = () => {
         <Flex
           flexDirection={["column-reverse", "row", "row"]}
           justifyContent="space-between"
-          alignItems="center"
+          alignItems="stretch"
           height="100%"
           p={["0", "0 0 0 2%"]}
           m="0 0 0 0"
           maxWidth="auto"
         >
-          <Flex flexDirection="column" alignItems="space-between" my={["3", "0"]}>
+          <Flex
+            flexDirection="column"
+            alignItems="space-between"
+            my={["3", "0"]}
+          >
             <HomePurpleIcon icon="growth" text="Is your business growing?" />
             <HomePurpleIcon
               icon="bogged"
@@ -51,10 +56,10 @@ export const Hero = () => {
             width={["100%", "300px", "300px"]}
             boxSizing="border-box"
             p={3}
-            height={["auto", "100%"]}
+            height={["auto"]}
           />
         </Flex>
-      </BgImage>
+      </BackgroundImage>
     </>
   )
 }
