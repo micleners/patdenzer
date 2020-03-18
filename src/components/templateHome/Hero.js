@@ -38,7 +38,7 @@ export const Hero = () => {
           flexDirection={["column-reverse", "row", "row"]}
           justifyContent="space-between"
           alignItems="stretch"
-          height="100%"
+          height="600px"
           p={["0", "0 0 0 2%"]}
           m="0 0 0 0"
           maxWidth="auto"

@@ -19,6 +19,7 @@ export const DarkText1 = props => (
     fontSize={[1, 2, 3]}
     letterSpacing="0.01em"
     lineHeight="1.35"
+    fontWeight="light"
     color="black"
     {...props}
   >
@@ -27,7 +28,13 @@ export const DarkText1 = props => (
 )
 
 export const PurpleText1 = props => (
-  <Text fontSize={[1, 2, 2]} lineHeight="1.15" color="darkPurple" fontWeight="light" {...props}>
+  <Text
+    fontSize={[1, 2, 3]}
+    lineHeight="1.15"
+    color="darkPurple"
+    fontWeight="light"
+    {...props}
+  >
     {props.children}
   </Text>
 )
@@ -43,6 +50,7 @@ export const DarkText2 = props => (
     fontSize={[0, 1, 2]}
     letterSpacing="0.01em"
     lineHeight="1.35"
+    fontWeight="light"
     color="black"
     {...props}
   >

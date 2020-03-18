@@ -1,6 +1,6 @@
 export const theme = {
   breakpoints: ["600px", "900px", "1200px"],
-  fontSizes: ['1em', '1.2em', '1.5em', '1.8em', '2em', '2.5em', '3em'],
+  fontSizes: ['0.8em', '1.0em', '1.25em', '1.5em', '2em', '2.5em', '3em'],
   colors: {
     purple: "#9984BC",
     lightPurple: "#DCD0EF",
@@ -16,7 +16,7 @@ export const theme = {
   space: [0, 4, 8, 16, 32, 64, 128, 256],
   fontWeights: {
     light: 200,
-    body: 300,
+    body: 400,
     heading: 600,
     bold: 700,
   },

@@ -9,7 +9,7 @@ const MenuLink = ({ location, children }) => (
     as={Link}
     color="purple"
     p={2}
-    fontWeight="light"
+    fontWeight="body"
     sx={{
       textDecoration: `none`,
     }}

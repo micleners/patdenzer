@@ -17,8 +17,8 @@ export const AssistMyClients = props => (
       ${theme.colors.blue} 20%,
       ${theme.colors.blue} 40%,
       ${theme.colors.purple} 40%,
-      ${theme.colors.purple} 60%,
-      ${theme.colors.darkPurple} 60%
+      ${theme.colors.purple} 70%,
+      ${theme.colors.darkPurple} 70%
     )`,
     }}
   >

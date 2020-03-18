@@ -1,28 +1,28 @@
 import React from "react"
-import { Card } from "rebass"
+import { Flex } from "rebass"
 
 export const TransparentCard = props => (
-  <Card
+  <Flex
     backgroundColor="overlay"
-    p={[1, 3, 4]}
+    p={[3, 3, 4]}
     sx={{
       borderRadius: 20,
     }}
     {...props}
   >
     {props.children}
-  </Card>
+  </Flex>
 )
 
 export const WhiteCard = props => (
-  <Card
+  <Flex
     backgroundColor="white"
-    p={[1, 3, 4]}
+    p={[3, 3, 4]}
     sx={{
       borderRadius: 20,
     }}
     {...props}
   >
     {props.children}
-  </Card>
+  </Flex>
 )
