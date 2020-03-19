@@ -61,19 +61,19 @@ export const TestimonialAmy = props => {
       <Flex
         sx={{ paddingTop: `${fullWidth / 5.5}px` }}
         flexDirection="column"
-        pr={5}
-        pl={5}
+        pr={[3, 5]}
+        pl={[3, 5]}
         pb={["175px", "180px", "250px"]}
       >
-        <DarkText2 fontSize={[0, 0, 1]} fontWeight="light">
-          "Pat joined my business to help me in a variety of ways. I was planning
-          a product launch and knew I would need support with the entire
-          process. While that product no longer exists, Pat made herself so
-          valuable to my business that I found all kinds of other deliciousness
-          to have her support me with. She has managed my business moving states
-          twice, my invoicing, my payroll, most of my vendors and payment
-          processing, as well as a large variety of other tasks. Working with
-          Pat as my assistant has been wonderful because I have experienced
+        <DarkText2 fontSize={[1, 1, 2]} fontWeight="light">
+          "Pat joined my business to help me in a variety of ways. I was
+          planning a product launch and knew I would need support with the
+          entire process. While that product no longer exists, Pat made herself
+          so valuable to my business that I found all kinds of other
+          deliciousness to have her support me with. She has managed my business
+          moving states twice, my invoicing, my payroll, most of my vendors and
+          payment processing, as well as a large variety of other tasks. Working
+          with Pat as my assistant has been wonderful because I have experienced
           great communication, proactive and anticipatory input, openness,
           collaboration, and new ideas and approaches to my work. There has not
           been anything she is interested in doing that she has not been willing
@@ -83,7 +83,7 @@ export const TestimonialAmy = props => {
           how she engages her audience, serves her clients, and shows up in the
           world. I thank God for her every day."
         </DarkText2>
-        <DarkText2 fontSize={[0, 0, 1]} fontWeight="strong" pt={5}>
+        <DarkText2 fontSize={[1, 1, 2]} fontWeight="strong" pt={5}>
           Amy Kazor
         </DarkText2>
         <DarkText2 fontSize={[0, 0, 1]} fontWeight="light">

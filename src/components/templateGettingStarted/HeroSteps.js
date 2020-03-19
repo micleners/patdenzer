@@ -29,6 +29,11 @@ export const HeroSteps = () => {
     }
   `)
 
+  const backgroundFluidImageStack = [
+    data.placeholderImage.childImageSharp.fluid,
+    `linear-gradient(rgba(255, 255, 255, 0.5), rgba(74, 43, 126, 0.5))`,
+  ].reverse()
+
   const Step = props => {
     const { margin, call, length, title, children } = props
     return (
@@ -51,7 +56,7 @@ export const HeroSteps = () => {
   return (
     <>
       <BackgroundImage
-        fluid={data.placeholderImage.childImageSharp.fluid}
+        fluid={backgroundFluidImageStack}
         title="astronaut"
         style={{ overflow: "auto" }}
       >

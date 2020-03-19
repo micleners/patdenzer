@@ -1,102 +1,107 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { Flex, Box } from "rebass"
-
+import { Textarea, Input } from "@rebass/forms"
 import { css, jsx } from "@emotion/core"
 import BgImage from "../molecules/BgImage"
 import BackgroundImage from "gatsby-background-image"
 import { HomePurpleIcon, HomeLogo } from "../molecules"
-import {
-  TransparentCard,
-  SectionHeader,
-  DarkText2,
-  DarkText1,
-  BlueText2,
-  PurpleText1,
-} from "../atoms"
+import { WhiteCard, DarkText1, WhiteText1, PurpleText1 } from "../atoms"
 import { below, useMediaQuery } from "../utilities"
 
-export const Contact = () => {
-  const Step = props => {
-    const { margin, call, length, title, children } = props
-    return (
-      <TransparentCard
-        m={[1, 2]}
-        alignItems="center"
-        flexDirection="column"
-        {...props}
-      >
-        <BlueText2 mb={margin}>{call}</BlueText2>
-        <DarkText2 mb={margin}>{length}</DarkText2>
-        <PurpleText1 mb={margin} fontWeight="body">
-          {title}
-        </PurpleText1>
-        <DarkText1 mb={margin}>{children}</DarkText1>
-      </TransparentCard>
-    )
-  }
-
+export const Contact = ({ call }) => {
   return (
     <>
-      <Flex m={[1, 3, 4]} my={2} flexDirection="column">
-        <TransparentCard alignSelf="center" m={2} width="auto">
-          <SectionHeader lineHeight="1">My Interview Process</SectionHeader>
-        </TransparentCard>
-        <TransparentCard m={2}>
-          <DarkText1>
-            I’ve developed a three-part interview process. The depth of my
-            interview process will help us both see if working together is a
-            perfect fit. I’ll learn about you and you’ll learn about me. With
-            the solid information gained through our discussions, we’ll make the
-            best decision about our partnership and the virtual assistant
-            services I bring to you and your business.
-          </DarkText1>
-        </TransparentCard>
+      <Flex bg="yellow" flexDirection="column">
+        <PurpleText1 fontSize={[4, 5, 6]} mx="auto" my={[3, 4]}>
+          {call}
+        </PurpleText1>
         <Flex alignItems="flex-start" flexDirection={["column", "row"]}>
-          <Step
-            margin="3"
-            call="First Call"
-            length="15-20 minutes"
-            title="Getting to Know You"
-            flex="1 1 0px"
+          <WhiteCard
+            flex="1 3 300px"
+            m={[1, 2, 4]}
+            alignItems="center"
+            flexDirection="column"
           >
-            We won’t talk business here; it’s two people meeting for the first
-            time getting to know each other.
-          </Step>
-          <Step
-            margin="3"
-            call="Second Call"
-            length="60-90 minutes"
-            title="Nuts and Bolts"
-            flex="1 1 0px"
+            <DarkText1 pb={4}>The best way to reach me is via email.</DarkText1>
+            <DarkText1>
+              Or, please feel free to complete the form. Either way, I’ll get
+              back to you as soon as I can!
+            </DarkText1>
+          </WhiteCard>
+          <WhiteCard
+            m={[1, 2, 4]}
+            flex="3 1 600px"
+            alignItems="center"
+            flexDirection="column"
+            alignSelf="stretch"
           >
-            <Box mb={3}>
-              Having decided to take the next step, we’ll talk about your
-              business, top priorities, and what kind of assistance you need.
-            </Box>
-            <Box>
-              We’ll also discuss how my practice works, fee structure, and
-              payment policies.
-            </Box>
-          </Step>
-          <Step
-            margin="3"
-            call="Third Call"
-            length="60-90 minutes"
-            title="Deeper Dive"
-            flex="1 1 0px"
-          >
-            <Box mb={3}>
-              We’ll dive into the more personal details of our working
-              relationship, including equality in the partnership, boundaries,
-              standards, communication, expectations, fees and commitment to the
-              collaborative partnership.
-            </Box>
-            <Box>
-              Here is where we’ll dig deep and really discover if we’re
-              compatible.
-            </Box>
-          </Step>
+            <Flex flexDirection="row" width="100%">
+              <Input
+                sx={{
+                  border: "none",
+                  borderRadius: "10px",
+                }}
+                mr={3}
+                p={2}
+                fontSize={[1, 2, 3]}
+                flex="1 1 0px"
+                fontWeight="light"
+                backgroundColor="grey"
+                id="name"
+                name="name"
+                type="name"
+                placeholder="NAME"
+              />
+              <Input
+                sx={{
+                  border: "none",
+                  borderRadius: "10px",
+                }}
+                ml={3}
+                p={2}
+                fontSize={[1, 2, 3]}
+                flex="1 1 0px"
+                fontWeight="light"
+                backgroundColor="grey"
+                id="email"
+                name="email"
+                type="email"
+                placeholder="EMAIL ADDRESS"
+              />
+            </Flex>
+            <Textarea
+              sx={{
+                border: "none",
+                borderRadius: "10px",
+              }}
+              mt={3}
+              p={2}
+              fontSize={[1, 2, 3]}
+              flex="1 1 0px"
+              height={"100px"}
+              minHeight={"100px"}
+              fontWeight="light"
+              backgroundColor="grey"
+              id="message"
+              name="message"
+              type="message"
+              placeholder="MESSAGE"
+            />
+            <WhiteText1
+              mt={3}
+              py={2}
+              px={3}
+              ml="auto"
+              mr={0}
+              bg="purple"
+              fontWeight="light"
+              color="white"
+              sx={{ borderRadius: "10px" }}
+            >
+              SUBMIT
+            </WhiteText1>
+          </WhiteCard>
         </Flex>
       </Flex>
     </>

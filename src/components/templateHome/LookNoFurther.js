@@ -66,6 +66,7 @@ export const LookNoFurther = props => {
           <SectionHeader
             textAlign="right"
             m={"4"}
+            pt={[4, 0, 0]}
             ml={"auto"}
             color="darkPurple"
           >

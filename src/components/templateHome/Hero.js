@@ -32,7 +32,47 @@ export const Hero = () => {
         height="600px"
         fadeIn="false"
         preserveStackingContext="true"
-        style={{ background: isRowBased ? "white" : "" }}
+        style={{ display: isRowBased ? "none" : "" }}
+      >
+        <Flex
+          flexDirection={["column-reverse", "row", "row"]}
+          justifyContent="space-between"
+          alignItems="stretch"
+          height="600px"
+          p={["0", "0 0 0 2%"]}
+          m="0 0 0 0"
+          maxWidth="auto"
+        >
+          <Flex
+            flexDirection="column"
+            alignItems="space-between"
+            my={["3", "0"]}
+          >
+            <HomePurpleIcon icon="growth" text="Is your business growing?" />
+            <HomePurpleIcon
+              icon="bogged"
+              text="Are you bogged down by details?"
+            />
+            <HomePurpleIcon
+              icon="overwhelmed"
+              text="Are you feeling overwhelmed?"
+            />
+            <HomePurpleIcon icon="sync" text="Are you feeling out of sync?" />
+          </Flex>
+          <HomeLogo
+            width={["100%", "300px", "300px"]}
+            boxSizing="border-box"
+            p={3}
+          />
+        </Flex>
+      </BackgroundImage>
+
+      <BackgroundImage
+        title="astronaut"
+        height="600px"
+        fadeIn="false"
+        preserveStackingContext="true"
+        style={{ display: isRowBased ? "" : "none" }}
       >
         <Flex
           flexDirection={["column-reverse", "row", "row"]}
