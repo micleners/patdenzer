@@ -11,7 +11,7 @@ module.exports = {
     // {
     //   resolve: `gatsby-plugin-google-fonts`,
     //   options: {
-    //     fonts: [`Open Sans`, `Heebo`, `Lato\:200,300,400,600`, `Gill Sans\:200,300,400,600`],
+    //     fonts: [`Open Sans`, `Lato\:200,400,600,700`],
     //     display: "swap",
     //   },
     // },
