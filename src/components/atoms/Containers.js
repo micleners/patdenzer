@@ -5,6 +5,7 @@ export const TransparentCard = props => (
   <Flex
     backgroundColor="overlay"
     p={[3, 3, 4]}
+    height="auto"
     sx={{
       borderRadius: 20,
     }}
@@ -17,6 +18,7 @@ export const TransparentCard = props => (
 export const WhiteCard = props => (
   <Flex
     backgroundColor="white"
+    height="auto"
     p={[3, 3, 4]}
     sx={{
       borderRadius: 20,
