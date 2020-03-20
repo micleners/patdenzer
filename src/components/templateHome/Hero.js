@@ -21,9 +21,13 @@ export const Hero = () => {
       }
     }
   `)
+  let isRowBased = false;
+  useEffect(() => {
+    try {
+      isRowBased = useMediaQuery("(max-width: 600px)")
+    } catch (e) {}
+  })
 
-  const isRowBased = useMediaQuery("(max-width: 600px)")
-  console.log(isRowBased)
   return (
     <>
       <BackgroundImage
@@ -66,9 +70,7 @@ export const Hero = () => {
         </Flex>
       </BackgroundImage>
 
-      <Box
-        sx={{ display: isRowBased ? "" : "none" }}
-      >
+      <Box sx={{ display: isRowBased ? "" : "none" }}>
         <Flex
           flexDirection={["column-reverse", "row", "row"]}
           justifyContent="space-between"
