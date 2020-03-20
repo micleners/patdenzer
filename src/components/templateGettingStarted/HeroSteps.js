@@ -60,7 +60,14 @@ export const HeroSteps = () => {
         title="astronaut"
         style={{ overflow: "auto" }}
       >
-        <Flex m={[1, 3, 4]} my={2} flexDirection="column">
+        <Flex
+          m={[1, 3, 4]}
+          my={2}
+          flexDirection="column"
+          sx={{
+            height: "auto",
+          }}
+        >
           <TransparentCard alignSelf="center" m={2} width="auto">
             <SectionHeader lineHeight="1">My Interview Process</SectionHeader>
           </TransparentCard>
@@ -74,7 +81,13 @@ export const HeroSteps = () => {
               services I bring to you and your business.
             </DarkText1>
           </TransparentCard>
-          <Flex alignItems="flex-start" flexDirection={["column", "row"]}>
+          <Flex
+            alignItems="flex-start"
+            flexDirection={["column", "row"]}
+            sx={{
+              height: "auto",
+            }}
+          >
             <Step
               margin="3"
               call="First Call"

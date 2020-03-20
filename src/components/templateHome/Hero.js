@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import { Flex, Box } from "rebass"
@@ -21,12 +21,8 @@ export const Hero = () => {
       }
     }
   `)
-  let isRowBased = false;
-  useEffect(() => {
-    try {
-      isRowBased = useMediaQuery("(max-width: 600px)")
-    } catch (e) {}
-  })
+
+  const isRowBased = useMediaQuery("(max-width: 600px)")
 
   return (
     <>
