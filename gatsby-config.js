@@ -8,11 +8,22 @@ module.exports = {
     `gatsby-background-image`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-emotion`,
+    // {
+    //   resolve: `gatsby-plugin-google-fonts`,
+    //   options: {
+    //     fonts: [`Open Sans`, `Heebo`, `Lato\:200,300,400,600`, `Gill Sans\:200,300,400,600`],
+    //     display: "swap",
+    //   },
+    // },
     {
-      resolve: `gatsby-plugin-google-fonts`,
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
-        fonts: [`Open Sans`, `Heebo`, `Lato\:200,300,400,600`, `Gill Sans\:200,300,400,600`],
-        display: "swap",
+        fonts: [
+          {
+            family: `Roboto Mono`,
+            variants: [`200`, `400`, `600`, `700`],
+          },
+        ],
       },
     },
     {
