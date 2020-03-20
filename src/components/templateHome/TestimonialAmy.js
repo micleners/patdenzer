@@ -31,13 +31,11 @@ export const TestimonialAmy = props => {
       const handleResize = () => setFullWidth(window ? window.innerWidth : 1000)
       if (window) {
         window.addEventListener("resize", handleResize)
-        console.log(fullWidth)
         return () => {
           window.removeEventListener("resize", handleResize)
         }
       }
     } catch (e) {
-      console.log(e)
     }
   })
 

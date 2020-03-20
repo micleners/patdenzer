@@ -13,14 +13,12 @@ export const LookNoFurther = props => {
       const handleResize = () =>
         setWidth((window ? window.innerWidth : 1000) - 300)
       if (window) {
-        console.log(width)
         window.addEventListener("resize", handleResize)
         return () => {
           window.removeEventListener("resize", handleResize)
         }
       }
     } catch (e) {
-      console.log(e)
     }
   })
 
@@ -30,13 +28,11 @@ export const LookNoFurther = props => {
       const handleResize = () => setFullWidth(window ? window.innerWidth : 1000)
       if (window) {
         window.addEventListener("resize", handleResize)
-        console.log(fullWidth)
         return () => {
           window.removeEventListener("resize", handleResize)
         }
       }
     } catch (e) {
-      console.log(e)
     }
   })
 

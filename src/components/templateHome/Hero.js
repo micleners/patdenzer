@@ -23,15 +23,14 @@ export const Hero = () => {
   `)
 
   const isRowBased = useMediaQuery("(max-width: 600px)")
-
+  console.log(isRowBased)
   return (
     <>
       <BackgroundImage
         fluid={data.placeholderImage.childImageSharp.fluid}
-        title="astronaut"
         height="600px"
-        fadeIn="false"
-        preserveStackingContext="true"
+        fadeIn={false}
+        preserveStackingContext={true}
         style={{ display: isRowBased ? "none" : "" }}
       >
         <Flex
@@ -67,18 +66,13 @@ export const Hero = () => {
         </Flex>
       </BackgroundImage>
 
-      <BackgroundImage
-        title="astronaut"
-        height="600px"
-        fadeIn="false"
-        preserveStackingContext="true"
-        style={{ display: isRowBased ? "" : "none" }}
+      <Box
+        sx={{ display: isRowBased ? "" : "none" }}
       >
         <Flex
           flexDirection={["column-reverse", "row", "row"]}
           justifyContent="space-between"
           alignItems="stretch"
-          height="600px"
           p={["0", "0 0 0 2%"]}
           m="0 0 0 0"
           maxWidth="auto"
@@ -105,7 +99,7 @@ export const Hero = () => {
             p={3}
           />
         </Flex>
-      </BackgroundImage>
+      </Box>
     </>
   )
 }
