@@ -57,8 +57,7 @@ export const HeroSteps = () => {
     <>
       <BackgroundImage
         fluid={backgroundFluidImageStack}
-        title="astronaut"
-        style={{ overflow: "auto" }}
+        style={{ overflow: "auto", height: "auto" }}
       >
         <Flex
           m={[1, 3, 4]}
