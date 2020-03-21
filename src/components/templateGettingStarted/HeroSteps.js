@@ -38,17 +38,17 @@ export const HeroSteps = () => {
     const { margin, call, length, title, children } = props
     return (
       <TransparentCard
-        m={[1, 2]}
+        m={[2, 2, 3]}
         alignItems="center"
         flexDirection="column"
         {...props}
       >
-        <BlueText2 mb={margin}>{call}</BlueText2>
-        <DarkText2 mb={margin}>{length}</DarkText2>
-        <PurpleText1 mb={margin} fontWeight="body">
+        <BlueText2 mb={margin ? margin : [1, 2, 3]}>{call}</BlueText2>
+        <DarkText2 mb={margin ? margin : [1, 2, 3]}>{length}</DarkText2>
+        <PurpleText1 mb={margin ? margin : [1, 2, 3]} fontWeight="body">
           {title}
         </PurpleText1>
-        <DarkText1 mb={margin}>{children}</DarkText1>
+        <DarkText1 mb={margin ? margin : [1, 2, 3]}>{children}</DarkText1>
       </TransparentCard>
     )
   }
@@ -63,6 +63,7 @@ export const HeroSteps = () => {
           m={[1, 3, 4]}
           my={2}
           flexDirection="column"
+          flex="1 1 0px"
           sx={{
             height: "auto",
           }}
@@ -80,31 +81,21 @@ export const HeroSteps = () => {
               services I bring to you and your business.
             </DarkText1>
           </TransparentCard>
-          <Flex
-            alignItems="flex-start"
-            flexDirection={["column", "row"]}
-            sx={{
-              height: "auto",
-            }}
-          >
+          <Flex alignItems="flex-start" flexDirection={["column", "row"]}>
             <Step
-              margin="3"
               call="First Call"
               length="15-20 minutes"
               title="Getting to Know You"
-              flex="1 1 0px"
             >
               We won’t talk business here; it’s two people meeting for the first
               time getting to know each other.
             </Step>
             <Step
-              margin="3"
               call="Second Call"
               length="60-90 minutes"
               title="Nuts and Bolts"
-              flex="1 1 0px"
             >
-              <Box mb={3}>
+              <Box mb={[1, 2, 3]}>
                 Having decided to take the next step, we’ll talk about your
                 business, top priorities, and what kind of assistance you need.
               </Box>
@@ -113,13 +104,7 @@ export const HeroSteps = () => {
                 payment policies.
               </Box>
             </Step>
-            <Step
-              margin="3"
-              call="Third Call"
-              length="60-90 minutes"
-              title="Deeper Dive"
-              flex="1 1 0px"
-            >
+            <Step call="Third Call" length="60-90 minutes" title="Deeper Dive">
               <Box mb={3}>
                 We’ll dive into the more personal details of our working
                 relationship, including equality in the partnership, boundaries,

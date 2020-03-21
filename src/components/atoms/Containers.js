@@ -18,7 +18,6 @@ export const TransparentCard = props => (
 export const WhiteCard = props => (
   <Flex
     backgroundColor="white"
-    height="auto"
     p={[3, 3, 4]}
     sx={{
       borderRadius: 20,

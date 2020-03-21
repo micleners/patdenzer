@@ -7,7 +7,7 @@ import { css, jsx } from "@emotion/core"
 import BgImage from "../molecules/BgImage"
 import BackgroundImage from "gatsby-background-image"
 import { HomePurpleIcon, HomeLogo } from "../molecules"
-import { below, useMediaQuery } from "../utilities"
+import { above, below, useMediaQuery } from "../utilities"
 
 export const Hero = () => {
   const data = useStaticQuery(graphql`
@@ -31,7 +31,11 @@ export const Hero = () => {
         height="600px"
         fadeIn={false}
         preserveStackingContext={true}
-        style={{ display: isRowBased ? "none" : "" }}
+        css={css`
+          ${below[600]`
+              display: none;
+            `}
+        `}
       >
         <Flex
           flexDirection={["column-reverse", "row", "row"]}
@@ -66,7 +70,13 @@ export const Hero = () => {
         </Flex>
       </BackgroundImage>
 
-      <Box sx={{ display: isRowBased ? "" : "none" }}>
+      <Box
+        css={css`
+          ${above[600]`
+              display: none;
+            `}
+        `}
+      >
         <Flex
           flexDirection={["column-reverse", "row", "row"]}
           justifyContent="space-between"
