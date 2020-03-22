@@ -1,6 +1,6 @@
 export const theme = {
-  breakpoints: ["600px", "900px", "1200px"],
-  fontSizes: ['0.8em', '1.0em', '1.25em', '1.5em', '2em', '2.5em', '3em'],
+  breakpoints: ["600px", "900px", "1200px", "1600px"],
+  fontSizes: ['12px', '16px', '20px', '24px', '32px', '40px', '48px'],
   colors: {
     purple: "#9984BC",
     lightPurple: "#DCD0EF",
@@ -21,8 +21,8 @@ export const theme = {
     bold: 700,
   },
   fonts: {
-    text: 'Lato, Arial, System-ui, sans-serif',
-    heading: 'Lato, arial, system-ui, sans-serif',
+    text: 'Gill Sans, Arial, System-ui, sans-serif',
+    heading: 'Gill Sans, arial, system-ui, sans-serif',
   },
   borderRadius: '20px',
   lineHeights: {

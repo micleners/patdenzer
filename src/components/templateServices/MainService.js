@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { Flex, Box } from "rebass"
+import styled from "@emotion/styled"
 
+import Img from "gatsby-image"
 import { css, jsx } from "@emotion/core"
 import BgImage from "../molecules/BgImage"
 import BackgroundImage from "gatsby-background-image"
@@ -13,12 +15,13 @@ import {
   DarkText1,
   BlueText2,
   PurpleText1,
+  WhiteText1,
 } from "../atoms"
 import { below, useMediaQuery } from "../utilities"
 import { theme } from "../utilities"
-import Services1 from "../../images/services1.svg"
-import Services2 from "../../images/services2.svg"
-import Services3 from "../../images/services3.svg"
+import iManage from "../../images/iManage.svg"
+import iCreate from "../../images/iCreate.svg"
+import iAssist from "../../images/iAssist.svg"
 
 export const MainService = () => {
   const [fullWidth, setFullWidth] = useState()
@@ -36,9 +39,21 @@ export const MainService = () => {
     } catch (e) {}
   })
 
+  const lt600 = useMediaQuery("(max-width: 600px)")
+  const lt900 = useMediaQuery("(max-width: 900px)")
+  const lt1200 = useMediaQuery("(max-width: 1200px)")
+  const lt1600 = useMediaQuery("(max-width: 1600px)")
+
   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "lavenderplant.png" }) {
+      lavender: file(relativePath: { eq: "lavenderplant.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 1400) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      pencil: file(relativePath: { eq: "pencil1.png" }) {
         childImageSharp {
           fluid(maxWidth: 1400) {
             ...GatsbyImageSharpFluid
@@ -48,31 +63,36 @@ export const MainService = () => {
     }
   `)
 
-  const backgroundFluidImageStack = [
-    data.placeholderImage.childImageSharp.fluid,
-    // `linear-gradient(rgba(255, 255, 255, 0.5), rgba(74, 43, 126, 0.5))`,
+  const purpleBackground = [
+    `linear-gradient(rgba(220, 208, 239, 1), rgba(220, 208, 239, 1))`,
   ].reverse()
 
-  const Step = props => {
-    const { margin, call, length, title, children } = props
-    return (
-      <TransparentCard
-        m={[2, 2, 3]}
-        alignItems="center"
-        flexDirection="column"
-        {...props}
-      >
-        <BlueText2 mb={margin ? margin : [1, 2, 3]}>{call}</BlueText2>
-        <DarkText2 mb={margin ? margin : [1, 2, 3]}>{length}</DarkText2>
-        <PurpleText1 mb={margin ? margin : [1, 2, 3]} fontWeight="body">
-          {title}
-        </PurpleText1>
-        <DarkText1 mb={margin ? margin : [1, 2, 3]}>{children}</DarkText1>
-      </TransparentCard>
-    )
-  }
+  const backgroundFluidImageStack = [
+    data.lavender.childImageSharp.fluid,
+    // `linear-gradient(rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.25))`,
+  ].reverse()
 
-  const Service = props => <Flex as="img" {...props} src={props.service} />
+  const Service = props => (
+    <Flex {...props}>
+      <img style={{ flex: "1 1 0px", width: "100%" }} src={props.service} />
+    </Flex>
+  )
+
+  const Circle = styled(Flex)`
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    flex: 1 1 0px;
+    text-align: center;
+    background-color: ${props => props.theme.colors.purple};
+    color: ${props => props.theme.colors.white};
+
+    &:after {
+      content: "";
+      display: block;
+      padding-bottom: 100%;
+    }
+  `
 
   return (
     <>
@@ -89,21 +109,51 @@ export const MainService = () => {
         <BackgroundImage
           fluid={backgroundFluidImageStack}
           style={{
+            backgroundPosition: lt600 ? "right top" : "right top",
+            height: `${lt600 ? "700px" : ""}${
+              lt1600 ? "1000px" : ""
+            } : "1400px"`,
+            height: lt600 ? "700px" : lt1600 ? "1000px" : "1400px",
+          }}
+        ></BackgroundImage>
+        <BackgroundImage
+          fluid={purpleBackground}
+          style={{
+            display: lt600 ? "block" : lt1600 ? "block" : "none",
+            height: lt600 ? "700px" : lt1600 ? "300px" : "1400px",
+          }}
+        ></BackgroundImage>
+        <BackgroundImage
+          fluid={data.pencil.childImageSharp.fluid}
+          style={{
+            width: "100%",
             overflow: "auto",
-            zIndex: 10,
+            backgroundPosition: lt600 ? "center" : "center",
+            position: "absolute",
+            height: "1100px",
+            zIndex: 5,
           }}
         >
-          <Box height="750px" />
+          <Box
+            id="apples"
+            sx={{
+              height: "1500px",
+            }}
+          />
         </BackgroundImage>
         <Box
           sx={{
-            width: "0",
+            position: "absolute",
+            overflow: "auto",
+            width: "100%",
             zIndex: 10,
             borderStyle: "solid",
-            borderWidth: `300px 0 0 ${fullWidth >= 0 ? fullWidth : 0}px`,
-            borderColor: `${theme.colors.purple} transparent transparent transparent`,
+            borderWidth: `${lt1600 ? "500px" : "700px"} 0 0 ${
+              fullWidth >= 0 ? fullWidth : 0
+            }px`,
+            borderColor: `${theme.colors.lightPurple} transparent transparent transparent`,
           }}
-        ></Box>
+        />
       </Box>
 
       <Flex
@@ -119,7 +169,7 @@ export const MainService = () => {
         <TransparentCard alignSelf="center" m={2} width="auto">
           <SectionHeader lineHeight="1">My Services</SectionHeader>
         </TransparentCard>
-        <TransparentCard m={2}>
+        <TransparentCard m={2} mt={4} mx={[2, 4, "10%"]}>
           <DarkText1>
             The joy of working with me as your Virtual Assistant is that it
             frees up valuable time for you to focus on those things in your
@@ -127,47 +177,42 @@ export const MainService = () => {
             it all.”
           </DarkText1>
         </TransparentCard>
-        <Flex flexDirection={["column", "row"]}>
-          <Service service={Services1} />
-          <Service service={Services2} />
+        <Flex
+          flexDirection={["column", "row"]}
+          alignItems="flex-start"
+          mx={[1, 4, "10%"]}
+        >
+          <Service service={iManage} mt={[3, 4]} mr={[0, 3, "2%"]} />
+          <Service service={iCreate} mt={[3, "25%"]} />
         </Flex>
-        <Service service={Services3} />
-        <Flex alignItems="flex-start" flexDirection={["column", "row"]}>
-          <Step
-            call="First Call"
-            length="15-20 minutes"
-            title="Getting to Know You"
-          >
-            We won’t talk business here; it’s two people meeting for the first
-            time getting to know each other.
-          </Step>
-          <Step
-            call="Second Call"
-            length="60-90 minutes"
-            title="Nuts and Bolts"
-          >
-            <Box mb={[1, 2, 3]}>
-              Having decided to take the next step, we’ll talk about your
-              business, top priorities, and what kind of assistance you need.
-            </Box>
-            <Box>
-              We’ll also discuss how my practice works, fee structure, and
-              payment policies.
-            </Box>
-          </Step>
-          <Step call="Third Call" length="60-90 minutes" title="Deeper Dive">
-            <Box mb={3}>
-              We’ll dive into the more personal details of our working
-              relationship, including equality in the partnership, boundaries,
-              standards, communication, expectations, fees and commitment to the
-              collaborative partnership.
-            </Box>
-            <Box>
-              Here is where we’ll dig deep and really discover if we’re
-              compatible.
-            </Box>
-          </Step>
+        <Flex
+          flexDirection={["column-reverse", "row"]}
+          alignItems="flex-start"
+          mx={[1, 4, "10%"]}
+        >
+          <Circle mt={[3, 4]} mr={[0, 3, "10%", "20%"]}>
+            <WhiteText1 width={"100%"} fontSize={[3, 1, 2, 3]} p={4}>
+              If there’s something you don’t see, just ask! The items I can
+              assist you with are so vast and varied it would be difficult to
+              list all of them here. There are so many things we can accomplish
+              together working as a team for your business success. Let’s talk!
+            </WhiteText1>
+          </Circle>
+          <Service service={iAssist} flex="1 1 0px" mt={[3, 5]} />
         </Flex>
+        <Circle
+          mt={[3, 4]}
+          mr={[0, "30%", "30%", "50%"]}
+          ml={[0, "10%", "10%", "20%"]}
+        >
+          <WhiteText1 width={"100%"} fontSize={[3, 1, 2, 3]} p={4}>
+            To learn more about working with a Virtual Assistant, click here to
+            read the article The Top 10 Things To Know About Professional
+            Virtual Assistants on the AssistU website. For any lingering
+            questions, there’s also a comprehensive list of frequently asked
+            questions also located on the AssistU website here.
+          </WhiteText1>
+        </Circle>
       </Flex>
     </>
   )

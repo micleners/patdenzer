@@ -61,6 +61,7 @@ export const HeroSteps = () => {
       >
         <Flex
           m={[1, 3, 4]}
+          py={[1, 3, 4]}
           my={2}
           flexDirection="column"
           flex="1 1 0px"

@@ -40,7 +40,13 @@ export const PurpleText1 = props => (
 )
 
 export const WhiteText1 = props => (
-  <Text fontSize={[1, 2, 3]} lineHeight="1.15" color="white" {...props}>
+  <Text
+    fontSize={[1, 2, 3]}
+    fontWeight="light"
+    lineHeight="1.15"
+    color="white"
+    {...props}
+  >
     {props.children}
   </Text>
 )

@@ -60,6 +60,7 @@ export const HomeYellowIcon = props => (
       justifySelf="center"
       p={["2", "2", "2"]}
       mt={2}
+      fontWeight="body"
       fontSize={["3", "2", "3"]}
     >
       {props.text}

@@ -4,11 +4,13 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { MainService } from "../components/templateServices"
+import { Contact } from "../components/templateShared"
 
 const SecondPage = () => (
   <Layout>
     <SEO title="Services" />
     <MainService />
+    <Contact call="Ready to schedule a call?"/>
   </Layout>
 )
 

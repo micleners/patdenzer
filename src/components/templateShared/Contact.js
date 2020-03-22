@@ -12,7 +12,8 @@ import { below, useMediaQuery } from "../utilities"
 export const Contact = ({ call }) => {
   return (
     <>
-      <Flex bg="yellow" flexDirection="column">
+      <Flex bg="yellow"
+          p={[1, 3, 4]} flexDirection="column">
         <PurpleText1 fontSize={[4, 5, 6]} mx="auto" my={[3, 4]}>
           {call}
         </PurpleText1>
@@ -96,7 +97,6 @@ export const Contact = ({ call }) => {
               ml="auto"
               mr={0}
               bg="purple"
-              fontWeight="light"
               color="white"
               sx={{ borderRadius: "10px" }}
             >

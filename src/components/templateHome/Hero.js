@@ -7,7 +7,7 @@ import { css, jsx } from "@emotion/core"
 import BgImage from "../molecules/BgImage"
 import BackgroundImage from "gatsby-background-image"
 import { HomePurpleIcon, HomeLogo } from "../molecules"
-import { above, below, useMediaQuery } from "../utilities"
+import { above, below } from "../utilities"
 
 export const Hero = () => {
   const data = useStaticQuery(graphql`
@@ -21,8 +21,6 @@ export const Hero = () => {
       }
     }
   `)
-
-  const isRowBased = useMediaQuery("(max-width: 600px)")
 
   return (
     <>
