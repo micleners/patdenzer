@@ -18,8 +18,7 @@ export const LookNoFurther = props => {
           window.removeEventListener("resize", handleResize)
         }
       }
-    } catch (e) {
-    }
+    } catch (e) {}
   })
 
   useEffect(() => {
@@ -32,14 +31,14 @@ export const LookNoFurther = props => {
           window.removeEventListener("resize", handleResize)
         }
       }
-    } catch (e) {
-    }
+    } catch (e) {}
   })
 
   return (
     <>
       <Box
         sx={{
+          display: ["none", "block"],
           position: "absolute",
           width: "0",
           height: "0",
@@ -49,6 +48,31 @@ export const LookNoFurther = props => {
             `200px ${width}px 0 0`,
             `200px ${width}px 0 0`,
           ],
+          borderColor: `${theme.colors.purple} transparent transparent transparent`,
+        }}
+      ></Box>
+      <Box
+        // sx={{
+        //   display: ["block", "none"],
+        //   width: "100%",
+        //   height: "100px",
+        //   backgroundImage: `linear-gradient(
+        //   170deg,
+        //   ${theme.colors.purple},
+        //   ${theme.colors.purple} 30%,
+        //   ${theme.colors.purple} 50%,
+        //   ${theme.colors.white} 50%,
+        //   ${theme.colors.white} 70%,
+        //   ${theme.colors.white} 70%
+        // )`,
+        // }}
+        sx={{
+          display: ["block", "none"],
+          position: "absolute",
+          width: "0",
+          height: "0",
+          borderStyle: "solid",
+          borderWidth: `100px ${fullWidth >= 0 ? fullWidth : 0}px 0 0`,
           borderColor: `${theme.colors.purple} transparent transparent transparent`,
         }}
       ></Box>
