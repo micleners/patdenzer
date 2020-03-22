@@ -9,6 +9,9 @@ import {
   AssistMyClients,
   TestimonialAmy,
 } from "../components/templateHome"
+import {
+  Contact
+} from "../components/templateShared"
 
 const IndexPage = () => (
   <Layout>
@@ -18,6 +21,8 @@ const IndexPage = () => (
     <PatDenzer />
     <AssistMyClients />
     <TestimonialAmy />
+
+    <Contact call="Ready to talk?"/>
   </Layout>
 )
 

@@ -52,20 +52,6 @@ export const LookNoFurther = props => {
         }}
       ></Box>
       <Box
-        // sx={{
-        //   display: ["block", "none"],
-        //   width: "100%",
-        //   height: "100px",
-        //   backgroundImage: `linear-gradient(
-        //   170deg,
-        //   ${theme.colors.purple},
-        //   ${theme.colors.purple} 30%,
-        //   ${theme.colors.purple} 50%,
-        //   ${theme.colors.white} 50%,
-        //   ${theme.colors.white} 70%,
-        //   ${theme.colors.white} 70%
-        // )`,
-        // }}
         sx={{
           display: ["block", "none"],
           position: "absolute",

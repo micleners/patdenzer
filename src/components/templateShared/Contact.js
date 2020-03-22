@@ -16,12 +16,13 @@ export const Contact = ({ call }) => {
         <PurpleText1 fontSize={[4, 5, 6]} mx="auto" my={[3, 4]}>
           {call}
         </PurpleText1>
-        <Flex alignItems="flex-start" flexDirection={["column", "row"]}>
+        <Flex alignItems="flex-start" mb={3} flexDirection={["column", "row"]}>
           <WhiteCard
-            flex="1 3 300px"
-            m={[1, 2, 4]}
+            flex={["0 0 0", "1 1 300px"]}
+            m={[2, 2, 4]}
             alignItems="center"
             flexDirection="column"
+            alignSelf="stretch"
           >
             <DarkText1 pb={4}>The best way to reach me is via email.</DarkText1>
             <DarkText1>
@@ -30,8 +31,8 @@ export const Contact = ({ call }) => {
             </DarkText1>
           </WhiteCard>
           <WhiteCard
-            m={[1, 2, 4]}
-            flex="3 1 600px"
+            m={[2, 2, 4]}
+            flex={["0 0 0", "3 1 600px"]}
             alignItems="center"
             flexDirection="column"
             alignSelf="stretch"

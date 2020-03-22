@@ -36,11 +36,10 @@ const Layout = ({ children }) => {
       <Header siteTitle={data.site.siteMetadata.title} />
 
       <main>{children}</main>
-      <footer>
-        © {new Date().getFullYear()}, Built with
-        {` `}
-        <a href="https://www.gatsbyjs.org">Gatsby</a>
-      </footer>
+      <Text p={2} fontWeight="light" as="footer">
+        {new Date().getFullYear()}, Pat Denzer VA. Built by{" "}
+        <a href="https://www.metalarkdesign.com/">Meta Lark Design</a>
+      </Text>
     </ThemeProvider>
   )
 }
