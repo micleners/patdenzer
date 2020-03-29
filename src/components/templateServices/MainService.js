@@ -74,7 +74,10 @@ export const MainService = () => {
 
   const Service = props => (
     <Flex {...props}>
-      <img style={{ flex: "1 1 0px", width: "100%" }} src={props.service} />
+      <img
+        style={{ flex: "1 1 auto", height: props.height, width: "100%" }}
+        src={props.service}
+      />
     </Flex>
   )
 
@@ -82,7 +85,7 @@ export const MainService = () => {
     justify-content: center;
     align-items: center;
     border-radius: 100%;
-    flex: 1 1 0px;
+    flex: 1 1 auto;
     text-align: center;
     background-color: ${props => props.theme.colors.purple};
     color: ${props => props.theme.colors.white};
@@ -166,7 +169,7 @@ export const MainService = () => {
           zIndex: 100,
         }}
       >
-        <TransparentCard alignSelf="center" m={2} width="auto">
+        <TransparentCard flex="1 1 auto" alignSelf="center" m={2} width="auto">
           <SectionHeader lineHeight="1">My Services</SectionHeader>
         </TransparentCard>
         <TransparentCard m={2} mt={4} mx={[2, 4, "10%"]}>
@@ -180,17 +183,24 @@ export const MainService = () => {
         <Flex
           flexDirection={["column", "row"]}
           alignItems="flex-start"
+          flex="1 1 auto"
           mx={[1, 4, "10%"]}
         >
-          <Service service={iManage} mt={[3, 4]} mr={[0, 3, "2%"]} />
-          <Service service={iCreate} mt={[3, "25%"]} />
+          <Service
+            service={iManage}
+            maxHeight="480px"
+            mt={[3, 4]}
+            mr={[0, 3, "2%"]}
+          />
+          <Service service={iCreate} maxHeight="350px" mt={[5, "25%"]} />
         </Flex>
         <Flex
           flexDirection={["column-reverse", "row"]}
           alignItems="flex-start"
+          flex="1 1 auto"
           mx={[1, 4, "10%"]}
         >
-          <Circle mt={[3, 4]} mr={[0, 3, "10%", "20%"]}>
+          <Circle flex="1 1 200px" mt={[4, 5]} mr={[4, 3, "10%", "20%"]}>
             <WhiteText1 width={"100%"} fontSize={[3, 1, 2, 3]} p={4}>
               If there’s something you don’t see, just ask! The items I can
               assist you with are so vast and varied it would be difficult to
@@ -198,14 +208,24 @@ export const MainService = () => {
               together working as a team for your business success. Let’s talk!
             </WhiteText1>
           </Circle>
-          <Service service={iAssist} flex="1 1 0px" mt={[3, 5]} />
+          <Service
+            service={iAssist}
+            maxHeight="365px"
+            flex="1 1 200px"
+            mt={[3, 5]}
+          />
         </Flex>
         <Circle
-          mt={[3, 4]}
+          mt={[4, 5]}
           mr={[0, "30%", "30%", "50%"]}
-          ml={[0, "10%", "10%", "20%"]}
+          ml={[4, "10%", "10%", "20%"]}
         >
-          <WhiteText1 width={"100%"} fontSize={[3, 1, 2, 3]} p={4}>
+          <WhiteText1
+            flex="1 1 auto"
+            width={"100%"}
+            fontSize={[3, 1, 2, 3]}
+            p={4}
+          >
             To learn more about working with a Virtual Assistant, click here to
             read the article The Top 10 Things To Know About Professional
             Virtual Assistants on the AssistU website. For any lingering
