@@ -1,1 +1,2 @@
-export * from './HeroAbout'
+export * from "./AboutSlider"
+export * from "./HeroAbout"

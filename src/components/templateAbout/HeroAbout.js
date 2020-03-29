@@ -2,14 +2,12 @@ import React from "react"
 import { Flex } from "rebass"
 
 import { TransparentCard, SectionHeader, DarkText1 } from "../atoms"
-import { below, useMediaQuery } from "../utilities"
 
 export const HeroAbout = () => {
   return (
     <>
       <Flex
         py={[1, 3, 4]}
-        my={2}
         bg="darkPurple"
         flexDirection="column"
         flex="1 1 0px"
