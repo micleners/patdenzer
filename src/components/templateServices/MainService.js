@@ -85,7 +85,6 @@ export const MainService = () => {
     justify-content: center;
     align-items: center;
     border-radius: 100%;
-    flex: 1 1 auto;
     text-align: center;
     background-color: ${props => props.theme.colors.purple};
     color: ${props => props.theme.colors.white};
@@ -200,7 +199,11 @@ export const MainService = () => {
           flex="1 1 auto"
           mx={[1, 4, "10%"]}
         >
-          <Circle flex="1 1 200px" mt={[4, 5]} mr={[4, 3, "10%", "20%"]}>
+          <Circle
+            flex={["1 1 auto", "1 1 200px"]}
+            mt={[4, 5]}
+            mr={[4, 3, "10%", "15%"]}
+          >
             <WhiteText1 width={"100%"} fontSize={[3, 1, 2, 3]} p={4}>
               If there’s something you don’t see, just ask! The items I can
               assist you with are so vast and varied it would be difficult to
@@ -217,8 +220,9 @@ export const MainService = () => {
         </Flex>
         <Circle
           mt={[4, 5]}
-          mr={[0, "30%", "30%", "50%"]}
-          ml={[4, "10%", "10%", "20%"]}
+          mr={[0, "30%", "35%", "40%"]}
+          ml={[4, "15%", "20%", "20%"]}
+          flex="1 1 auto"
         >
           <WhiteText1
             flex="1 1 auto"
