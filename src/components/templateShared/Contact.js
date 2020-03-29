@@ -1,13 +1,7 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import { Flex, Box } from "rebass"
+import { Flex } from "rebass"
 import { Textarea, Input } from "@rebass/forms"
-import { css, jsx } from "@emotion/core"
-import BgImage from "../molecules/BgImage"
-import BackgroundImage from "gatsby-background-image"
-import { HomePurpleIcon, HomeLogo } from "../molecules"
 import { WhiteCard, DarkText1, WhiteText1, PurpleText1 } from "../atoms"
-import { below, useMediaQuery } from "../utilities"
 
 export const Contact = ({ call }) => {
   return (
