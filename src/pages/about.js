@@ -4,15 +4,20 @@ import { Link } from "gatsby"
 import { Box } from "rebass"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { HeroAbout, AboutSlider } from "../components/templateAbout"
+import {
+  HeroAbout,
+  AboutSlider,
+  AboutSlideAlt,
+  AboutAccolades,
+} from "../components/templateAbout"
 
 const About = () => (
   <Layout>
     <SEO title="About" />
     <HeroAbout />
-    <Box width="100%" padding={5}>
-      <AboutSlider />
-    </Box>
+    <AboutSlider />
+    <AboutSlideAlt />
+    <AboutAccolades />
   </Layout>
 )
 

@@ -7,10 +7,8 @@ import Img from "gatsby-image"
 import { below } from "../utilities"
 import { useStaticQuery, graphql } from "gatsby"
 import { WhiteCard, SectionHeader, DarkText1 } from "../atoms"
-import Back from "../../assets/back.svg"
-import Next from "../../assets/next.svg"
 
-export const AboutSlider = () => {
+export const AboutSlideAlt = () => {
   const data = useStaticQuery(graphql`
     query {
       drop: file(relativePath: { eq: "about-drop.png" }) {
@@ -45,58 +43,28 @@ export const AboutSlider = () => {
   `)
 
   const Slide = props => (
-    <Flex bg={props.bg} py={5} flexDirection={["column"]} height="100%">
-      <Flex
-        px={[2, 5]}
-        flex-direction={["column", "column", "row"]}
-        alignItems="center"
-      >
-        <Img
-          fixed={props.image}
-          style={{ width: "250px", minWidth: "250px", marginRight: "50px" }}
-        />
-        <WhiteCard mb={2}>
-          <DarkText1>{props.text}</DarkText1>
-        </WhiteCard>
-      </Flex>
+    <Flex
+      py={3}
+      px={[2, 5]}
+      bg={props.bg}
+      flexDirection="column"
+      alignItems="center"
+    >
+      <Img
+        fixed={props.image}
+        style={{
+          width: "250px",
+          minWidth: "250px",
+        }}
+      />
+      <WhiteCard mb={2}>
+        <DarkText1>{props.text}</DarkText1>
+      </WhiteCard>
     </Flex>
   )
 
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: true,
-    nextArrow: <Next />,
-    prevArrow: <Back />,
-  }
-
-  const StyledSlider = styled(Slider)`
-    background: ${props => props.theme.colors.purple};
-    padding-bottom: 25px;
-    .slick-arrow.slick-next {
-      right: 15px;
-      z-index: 10;
-    }
-    .slick-arrow.slick-prev {
-      left: 15px;
-      z-index: 10;
-    }
-    .slick-dots {
-      top: 25px;
-    }
-
-    ${below[900]`
-      &.slick-slider {
-        display: none;
-      }
-    `}
-  `
-
   return (
-    <StyledSlider {...settings}>
+    <Box display={["block", "block", "none"]}>
       <Slide
         bg="yellow"
         image={data.waterfall.childImageSharp.fixed}
@@ -117,6 +85,6 @@ export const AboutSlider = () => {
         image={data.drop.childImageSharp.fixed}
         text="I’ve “grown up ” with technology, from the mag card word processors of yesterday to the technology of today. My skills are continuously evolving and I continue to learn on a daily basis. I’m constantly amazed by our technological world and how it can bring us together with the touch of a button. Even more, I love the connections I’ve been able to form through this wondrous virtual community."
       />
-    </StyledSlider>
+    </Box>
   )
 }
