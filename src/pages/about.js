@@ -1,16 +1,28 @@
 import React from "react"
 import { Link } from "gatsby"
 
+import { Box } from "rebass"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import {
+  HeroAbout,
+  AboutSlider,
+  AboutSlideAlt,
+  AboutAccolades,
+  AboutTestimonial,
+} from "../components/templateAbout"
+import { Contact } from "../components/templateShared"
 
-const SecondPage = () => (
+const About = () => (
   <Layout>
     <SEO title="About" />
-    <h1>Hi from the second page</h1>
-    <p>Welcome to page 2</p>
-    <Link to="/">Go back to the homepage</Link>
+    <HeroAbout />
+    <AboutSlider />
+    <AboutSlideAlt />
+    <AboutAccolades />
+    <AboutTestimonial />
+    <Contact call="Let’s Talk." />
   </Layout>
 )
 
-export default SecondPage
+export default About
