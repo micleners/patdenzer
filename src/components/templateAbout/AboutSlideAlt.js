@@ -57,7 +57,7 @@ export const AboutSlideAlt = () => {
           minWidth: "250px",
         }}
       />
-      <WhiteCard mb={2}>
+      <WhiteCard mx={1} mb={2}>
         <DarkText1>{props.text}</DarkText1>
       </WhiteCard>
     </Flex>
