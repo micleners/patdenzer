@@ -41,7 +41,7 @@ export const HeroSteps = () => {
         m={[2, 2, 3]}
         alignItems="center"
         flexDirection="column"
-        flex="1 1 0px"
+        flex="1 1 auto"
         {...props}
       >
         <BlueText2 mb={margin ? margin : [1, 2, 3]}>{call}</BlueText2>
