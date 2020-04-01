@@ -8,6 +8,7 @@ export const HeroAbout = () => {
     <>
       <Flex
         py={[1, 3, 4]}
+        px={1}
         bg="darkPurple"
         flexDirection="column"
         flex="1 1 0px"
