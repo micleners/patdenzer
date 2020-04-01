@@ -9,7 +9,9 @@ import {
   AboutSlider,
   AboutSlideAlt,
   AboutAccolades,
+  AboutTestimonial,
 } from "../components/templateAbout"
+import { Contact } from "../components/templateShared"
 
 const About = () => (
   <Layout>
@@ -18,6 +20,8 @@ const About = () => (
     <AboutSlider />
     <AboutSlideAlt />
     <AboutAccolades />
+    <AboutTestimonial />
+    <Contact call="Let’s Talk." />
   </Layout>
 )
 
