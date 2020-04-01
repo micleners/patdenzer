@@ -37,8 +37,15 @@ const Header = ({ siteTitle }) => {
     display: ${({ open }) => (open ? "flex" : "none")};
   `
 
+  const StickyHeader = styled.header`
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+  `
+
   return (
-    <header>
+    <StickyHeader>
       <Flex
         px={2}
         bg="white"
@@ -46,7 +53,12 @@ const Header = ({ siteTitle }) => {
         alignItems="center"
       >
         <SlidingMenu flexDirection="column" open={isMenuOpen}>
-          <MenuLink location="/getting-started" p={3} pb={1} fontSize={[2, 2, 3]}>
+          <MenuLink
+            location="/getting-started"
+            p={3}
+            pb={1}
+            fontSize={[2, 2, 3]}
+          >
             Getting Started
           </MenuLink>
           <MenuLink location="/services" p={3} pb={1} fontSize={[2, 2, 3]}>
@@ -78,7 +90,7 @@ const Header = ({ siteTitle }) => {
           </Burger>
         </Box>
       </Flex>
-    </header>
+    </StickyHeader>
   )
 }
 
