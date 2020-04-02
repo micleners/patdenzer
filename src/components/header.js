@@ -29,7 +29,7 @@ const Header = ({ siteTitle }) => {
     background: ${theme.colors.white};
     position: absolute;
     right: 0;
-    top: 70px;
+    top: 50px;
     z-index: 50;
     /* transform: translateY(calc(-140%)); */
     /* transform: ${({ open }) =>
@@ -69,7 +69,7 @@ const Header = ({ siteTitle }) => {
           </MenuLink>
         </SlidingMenu>
         <Link to="/">
-          <LogoImage icon="small" height="70px" width="auto" />
+          <LogoImage icon="small" height="50px" width="auto" />
         </Link>
         <Flex ml="auto" alignItems="center" display={["none", "flex"]}>
           <MenuLink location="/getting-started" display={["none", "flex"]}>

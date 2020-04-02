@@ -35,7 +35,7 @@ const Layout = ({ children }) => {
       />
       <Header siteTitle={data.site.siteMetadata.title} />
 
-      <main style={{paddingTop: "75px"}}>{children}</main>
+      <main style={{paddingTop: "50px"}}>{children}</main>
       <Text p={2} fontWeight="light" as="footer">
         {new Date().getFullYear()}, Pat Denzer VA. Built by{" "}
         <a href="https://www.metalarkdesign.com/">Meta Lark Design</a>
