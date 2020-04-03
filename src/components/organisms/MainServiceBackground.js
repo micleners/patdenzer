@@ -84,7 +84,7 @@ export const MainServiceBackground = () => {
         style={{
           width: "100%",
           overflow: "auto",
-          backgroundPosition: lt600 ? "center" : "center",
+          backgroundPosition: lt600 ? "right" : "right",
           position: "absolute",
           height: "1100px",
           zIndex: 5,
