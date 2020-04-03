@@ -55,12 +55,14 @@ export const MainService = () => {
     { icon: Calendars, title: "Calendars & Appointments" },
     { icon: WebContent, title: "Website Content" },
   ]
+
   const create = [
     { icon: PowerPoint, title: "PowerPoint Presentations" },
     { icon: Spreadsheet, title: "Spreadsheets" },
     { icon: Policy, title: "Policy & Procedure Manuals" },
     { icon: Newsletter, title: "Newsletters" },
   ]
+
   const assist = [
     { icon: WordProcessing, title: "Word Processing" },
     { icon: Proofreading, title: "Proofreading" },
@@ -83,7 +85,7 @@ export const MainService = () => {
       <Flex
         justifyContent="space-around"
         sx={{ display: ["flex", "none"] }}
-        mx={5}
+        mx={3}
         pb={3}
       >
         <Offering src={icons[0].icon} title={icons[0].title} mr={[2, 3, 5]} />
@@ -92,7 +94,7 @@ export const MainService = () => {
       <Flex
         justifyContent="space-around"
         sx={{ display: ["flex", "none"] }}
-        mx={5}
+        mx={3}
         pb={3}
       >
         <Offering src={icons[2].icon} title={icons[2].title} mr={[2, 3, 5]} />

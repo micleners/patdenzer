@@ -86,6 +86,7 @@ export const MainServiceBackground = () => {
           overflow: "auto",
           backgroundPosition: lt600 ? "right" : "right",
           position: "absolute",
+          backgroundAttachment: "fixed",
           height: "1100px",
           zIndex: 5,
         }}
