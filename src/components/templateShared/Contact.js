@@ -6,6 +6,10 @@ import { WhiteCard, DarkText1, WhiteText1, PurpleText1 } from "../atoms"
 export const Contact = ({ call }) => {
   return (
     <Flex
+      as="form"
+      name="contact"
+      method="POST"
+      data-netlify="true"
       bg="yellow"
       p={[1, 3, 4]}
       flexDirection="column"
@@ -19,11 +23,7 @@ export const Contact = ({ call }) => {
       >
         {call}
       </PurpleText1>
-      <Flex
-        alignItems="flex-start"
-        mb={3}
-        flexDirection={["column", "row"]}
-      >
+      <Flex alignItems="flex-start" mb={3} flexDirection={["column", "row"]}>
         <WhiteCard
           flex={["1 1 auto", "1 1 300px"]}
           m={[2, 2, 4]}
@@ -94,12 +94,14 @@ export const Contact = ({ call }) => {
             placeholder="MESSAGE"
           />
           <WhiteText1
+            as="button"
             mt={3}
             py={2}
             px={3}
             ml="auto"
             mr={0}
             bg="purple"
+            type="submit"
             color="white"
             sx={{ borderRadius: "10px" }}
           >
