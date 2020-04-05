@@ -10,7 +10,7 @@ const SecondPage = () => (
   <Layout>
     <SEO title="Services" />
     <MainService />
-    <Contact call="Ready to schedule a call?"/>
+    <Contact call="Questions?"/>
   </Layout>
 )
 

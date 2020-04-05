@@ -27,6 +27,7 @@ export const AccomplishThisBy = props => {
         textAlign={["center", "center", "left"]}
         fontWeight="light"
         py={[3, 3, 0]}
+        mx="auto"
       >
         I accomplish this by...
       </SectionHeader>

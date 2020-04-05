@@ -83,7 +83,7 @@ export const MainServiceBackground = () => {
         fluid={data.pencil.childImageSharp.fluid}
         style={{
           width: "100%",
-          overflow: "auto",
+          overflow: "hidden",
           backgroundPosition: lt600 ? "right" : "right",
           position: "absolute",
           backgroundAttachment: "fixed",

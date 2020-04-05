@@ -21,7 +21,7 @@ export const HeroSteps = () => {
     query {
       placeholderImage: file(relativePath: { eq: "lavenderfield.png" }) {
         childImageSharp {
-          fluid(maxWidth: 1400) {
+          fluid(maxWidth: 2000) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -41,7 +41,8 @@ export const HeroSteps = () => {
         m={[2, 2, 3]}
         alignItems="center"
         flexDirection="column"
-        flex="1 1 auto"
+        flex={["1 1 auto", "1 1 0px"]}
+        // alignSelf="stretch"
         {...props}
       >
         <BlueText2 mb={margin ? margin : [1, 2, 3]}>{call}</BlueText2>
