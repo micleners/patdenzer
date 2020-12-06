@@ -1,5 +1,5 @@
 import React from "react"
-import { Flex } from "rebass"
+import { Flex, Box } from "rebass"
 import { Textarea, Input } from "@rebass/forms"
 import { WhiteCard, DarkText1, WhiteText1, PurpleText1 } from "../atoms"
 
@@ -29,7 +29,7 @@ export const Contact = ({ call }) => {
           <WhiteCard
             flex={["1 1 auto", "1 1 300px"]}
             m={[2, 2, 4]}
-            alignItems="center"
+            alignItems="flex-start"
             flexDirection="column"
             alignSelf="stretch"
           >
@@ -47,7 +47,8 @@ export const Contact = ({ call }) => {
             alignSelf="stretch"
           >
             <Flex flexDirection="row" flex="1 1 autopx" width="100%">
-              <Input
+              <Box
+                as="input"
                 sx={{
                   border: "none",
                   borderRadius: "10px",
@@ -60,7 +61,7 @@ export const Contact = ({ call }) => {
                 id="name"
                 name="name"
                 type="name"
-                placeholder="NAME"
+                placeholder="Name"
               />
               <Input
                 sx={{
@@ -75,25 +76,25 @@ export const Contact = ({ call }) => {
                 id="email"
                 name="email"
                 type="email"
-                placeholder="EMAIL ADDRESS"
+                placeholder="E-mail Address"
               />
             </Flex>
             <Textarea
               sx={{
                 border: "none",
                 borderRadius: "10px",
+                fontFamily: "Arial, System-ui, sans-serif",
               }}
               mt={3}
               p={2}
               fontSize={[1, 2, 3]}
-              height={"100px"}
               minHeight={"100px"}
               fontWeight="light"
               backgroundColor="grey"
               id="message"
               name="message"
               type="message"
-              placeholder="MESSAGE"
+              placeholder="Message"
             />
             <input type="hidden" name="bot-field" />
             <input type="hidden" name="form-name" value="contact" />
