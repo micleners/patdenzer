@@ -4,8 +4,8 @@ import { Flex, Text, Image } from "rebass"
 
 import { PurpleText1 } from "../atoms/Texts"
 
-import BigLogo from "../../images/big-logo.svg"
-import SmallLogo from "../../images/small-logo.svg"
+import BigLogo from "../../images/new_logo.svg"
+import SmallLogo from "../../images/new_logo_header.svg"
 
 const icons = {
   big: BigLogo,

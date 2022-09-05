@@ -69,7 +69,7 @@ const Header = ({ siteTitle }) => {
           </MenuLink>
         </SlidingMenu>
         <Link to="/">
-          <LogoImage icon="small" height="50px" width="auto" />
+          <LogoImage icon="small" height="50px" width="150px" mt="5px" />
         </Link>
         <Flex ml="auto" alignItems="center" display={["none", "flex"]}>
           <MenuLink location="/getting-started" display={["none", "flex"]}>
