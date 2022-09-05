@@ -5,7 +5,7 @@ import SEO from "../components/seo"
 import {
   Hero,
   LookNoFurther,
-  PatDenzer,
+  PatCurtis,
   AssistMyClients,
   TestimonialAmy,
 } from "../components/templateHome"
@@ -18,7 +18,7 @@ const IndexPage = () => (
     <SEO title="Home" />
     <Hero />
     <LookNoFurther />
-    <PatDenzer />
+    <PatCurtis />
     <AssistMyClients />
     <TestimonialAmy />
 
