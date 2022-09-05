@@ -37,7 +37,7 @@ const Layout = ({ children }) => {
 
       <main style={{paddingTop: "50px"}}>{children}</main>
       <Text p={2} fontWeight="light" as="footer">
-        {new Date().getFullYear()}, Pat Denzer VA. Built by{" "}
+        {new Date().getFullYear()}, Pat Curtis VA. Built by{" "}
         <a href="https://www.metalarkdesign.com/">Meta Lark Design</a>
       </Text>
     </ThemeProvider>

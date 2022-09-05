@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Pat Denzer VA`,
-    description: `Pat Denzer, Virtual Assistant. Creating flow for your business.`,
-    author: `Pat Denzer`,
+    title: `Pat Curtis VA`,
+    description: `Pat Curtis, Virtual Assistant. Creating flow for your business.`,
+    author: `Pat Curtis`,
   },
   plugins: [
     `gatsby-background-image`,

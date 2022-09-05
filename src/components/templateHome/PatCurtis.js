@@ -8,7 +8,7 @@ import styled from "@emotion/styled"
 import { PurpleText1, SectionHeader } from "../atoms"
 import { StandardLayout, below } from "../utilities"
 
-export const PatDenzer = props => {
+export const PatCurtis = props => {
   const data = useStaticQuery(graphql`
     query {
       patImage: file(relativePath: { eq: "pat_headshot.png" }) {
@@ -60,7 +60,7 @@ export const PatDenzer = props => {
         p="0 1.0875rem 1.45rem"
       >
         <SectionHeader m={"4"} color="darkPurple" textAlign={["center", "center", "left"]} fontWeight="light">
-          Hello, I’m Pat Denzer
+          Hello, I’m Pat Curtis
         </SectionHeader>
         <HeadShotSmall fluid={data.patImage.childImageSharp.fluid} />
         <PurpleText1
