@@ -1,11 +1,12 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import { LogoImage, PurpleText1 } from "../components/atoms"
-import { Flex, Text, Box } from "rebass"
+import { Flex, Image, Box } from "rebass"
 import styled from "@emotion/styled"
 import { theme } from "./utilities"
 import React, { useState } from "react"
 import { Burger } from "./atoms"
+import SmallLogo from "../images/new_logo_header.png"
 
 const MenuLink = props => (
   <PurpleText1
@@ -69,7 +70,14 @@ const Header = ({ siteTitle }) => {
           </MenuLink>
         </SlidingMenu>
         <Link to="/">
-          <LogoImage icon="small" height="50px" width="150px" mt="5px" />
+          <Image
+            src={SmallLogo}
+            alt={`Pat Curtis, Virtual Assistant, Icon`}
+            icon="small"
+            height="37.4px"
+            width="150px"
+            mt="5px"
+          />
         </Link>
         <Flex ml="auto" alignItems="center" display={["none", "flex"]}>
           <MenuLink location="/getting-started" display={["none", "flex"]}>
