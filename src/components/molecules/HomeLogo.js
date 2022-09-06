@@ -1,6 +1,6 @@
 import React from "react"
 import { Flex,Image } from "rebass"
-import BigLogo from "../../images/new_logo.svg"
+import BigLogo from "../../images/new_logo.png"
 
 export const HomeLogo = props => (
   <Flex backgroundColor="darkPurple" {...props}>
