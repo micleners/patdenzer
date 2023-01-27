@@ -31,15 +31,15 @@ export const AssistMyClients = props => (
         textAlign={["center", "center", "left"]}
         fontWeight="light"
       >
-        I assist my clients with
+        What I bring to my clients
       </SectionHeader>
       <Flex
         flexDirection={["column", "row"]}
         justifyContent="space-between"
         alignItems="center"
       >
-        <HomeYellowIcon icon="passion" text="Passion"></HomeYellowIcon>
         <HomeYellowIcon icon="experience" text="Experience"></HomeYellowIcon>
+        <HomeYellowIcon icon="passion" text="Passion"></HomeYellowIcon>
         <HomeYellowIcon
           icon="authenticity"
           text="Authenticity"

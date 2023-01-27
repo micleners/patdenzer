@@ -34,9 +34,11 @@ export const Contact = ({ call }) => {
             alignSelf="stretch"
           >
             <DarkText1 pb={4}>The best way to reach me is via email.</DarkText1>
+            <DarkText1 pb={4}>
+              If you prefer, please feel free to complete the form.
+            </DarkText1>
             <DarkText1>
-              Or, please feel free to complete the form. Either way, I’ll get
-              back to you as soon as I can!
+              I look forward to connecting.
             </DarkText1>
           </WhiteCard>
           <WhiteCard
