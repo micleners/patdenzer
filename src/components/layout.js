@@ -1,6 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { Global, css, ThemeProvider } from "@emotion/react"
+import { Global, css, ThemeProvider as ThemeProviderDos } from "@emotion/react"
+import { ThemeProvider } from "emotion-theming"
 import { useStaticQuery, graphql } from "gatsby"
 
 import { theme } from "./utilities"
@@ -21,6 +22,8 @@ const Layout = ({ children }) => {
   `)
 
   return (
+    <ThemeProviderDos theme={theme}>
+
     <ThemeProvider theme={theme}>
       <Global
         styles={theme => css`
@@ -40,6 +43,7 @@ const Layout = ({ children }) => {
         <a href="https://www.metalarkdesign.com/">Meta Lark Design</a>
       </Text>
     </ThemeProvider>
+    </ThemeProviderDos>
   )
 }
 
