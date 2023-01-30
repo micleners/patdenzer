@@ -2,7 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { Flex, Box, Image } from "rebass"
 import Img from "gatsby-image"
-import { css, jsx } from "@emotion/core"
+import { css, jsx } from "@emotion/react"
 
 import styled from "@emotion/styled"
 import { PurpleText1, SectionHeader } from "../atoms"

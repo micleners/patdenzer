@@ -1,7 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { Global, css } from "@emotion/core"
-import { ThemeProvider } from "emotion-theming"
+import { Global, css, ThemeProvider } from "@emotion/react"
 import { useStaticQuery, graphql } from "gatsby"
 
 import { theme } from "./utilities"

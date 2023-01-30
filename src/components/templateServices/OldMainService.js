@@ -4,7 +4,7 @@ import { Flex, Box } from "rebass"
 import styled from "@emotion/styled"
 
 import Img from "gatsby-image"
-import { css, jsx } from "@emotion/core"
+import { css, jsx } from "@emotion/react"
 import BgImage from "../molecules/BgImage"
 import BackgroundImage from "gatsby-background-image"
 import { HomePurpleIcon, HomeLogo } from "../molecules"

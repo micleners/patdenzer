@@ -2,7 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { Flex, Box } from "rebass"
 
-import { css, jsx } from "@emotion/core"
+import { css, jsx } from "@emotion/react"
 import BgImage from "../molecules/BgImage"
 import BackgroundImage from "gatsby-background-image"
 import { HomePurpleIcon, HomeLogo } from "../molecules"
