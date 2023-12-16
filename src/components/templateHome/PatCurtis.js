@@ -11,7 +11,7 @@ import { StandardLayout, below } from "../utilities"
 export const PatCurtis = props => {
   const data = useStaticQuery(graphql`
     query {
-      patImage: file(relativePath: { eq: "pat_headshot.png" }) {
+      patImage: file(relativePath: { eq: "pat_headshot.jpeg" }) {
         childImageSharp {
           fluid(maxWidth: 1000) {
             ...GatsbyImageSharpFluid

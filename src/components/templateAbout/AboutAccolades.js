@@ -12,6 +12,8 @@ import acc1Verification from "../../images/acc1-verification.gif"
 import acc2Click from "../../images/acc2-click-to-verify.gif"
 import acc3Volunteer from "../../images/acc3-volunteer-of-year.gif"
 import acc4Supportive from "../../images/acc4-most-supportive.png"
+import acc5 from "../../images/2023_winner_volunteer_h.png"
+import acc6 from "../../images/2023_winner_volunteer_v.png"
 
 export const AboutAccolades = () => {
   const [fullWidth, setFullWidth] = useState()
@@ -41,6 +43,7 @@ export const AboutAccolades = () => {
   const Acc4Supportive = () => (
     <img src={acc4Supportive} style={{ width: "140px" }} />
   )
+  const Acc5 = () => <img src={acc5} style={{ width: "200px" }} />
 
   return (
     <Box>
@@ -57,9 +60,25 @@ export const AboutAccolades = () => {
           borderColor: `${theme.colors.lightPurple} transparent transparent transparent`,
         }}
       ></Box>
+
+      <Flex
+      mt={[4, 0, 0]}
+        pt={lt900 ? "3" : "100px"}
+        ml={[2]}
+        mr={[2, 3, 5]}
+        alignItems="flex-end"
+        justifyContent="flex-end"
+        flexWrap="wrap"
+      >
+        <Flex mr={[2, 2, 3]}>
+          <Acc1Verification />
+        </Flex>
+        <Flex mr={[2, 2, 3]}>
+          <Acc5 />
+        </Flex>
+      </Flex>
       <Flex
         py={5}
-        pt={lt900 ? "3" : "100px"}
         ml={[2]}
         mr={[2, 3, 5]}
         alignItems="flex-end"
@@ -72,9 +91,6 @@ export const AboutAccolades = () => {
           alignItems={["flex-start", "flex-end"]}
           justifyContent={["space-around", "space-between"]}
         >
-          <Flex mr={[2, 2, 3]}>
-            <Acc1Verification />
-          </Flex>
           <Flex mr={[2, 2, 3]}>
             <Acc2Click />
           </Flex>
