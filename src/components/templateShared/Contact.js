@@ -33,13 +33,13 @@ export const Contact = ({ call }) => {
             flexDirection="column"
             alignSelf="stretch"
           >
-            <DarkText1 pb={4}>The best way to reach me is via email.</DarkText1>
+            <DarkText1 pb={4}>
+              The best way to reach me is via <a href="mailto:pat@patcurtisva.com">email</a>.
+            </DarkText1>
             <DarkText1 pb={4}>
               If you prefer, please feel free to complete the form.
             </DarkText1>
-            <DarkText1>
-              I look forward to connecting.
-            </DarkText1>
+            <DarkText1>I look forward to connecting.</DarkText1>
           </WhiteCard>
           <WhiteCard
             m={[2, 2, 4]}

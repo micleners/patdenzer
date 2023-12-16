@@ -127,7 +127,12 @@ export const MainService = () => {
             it all.”
           </DarkText1>
         </TransparentCard>
-        <TransparentCard flexDirection="column" m={2} mt={[4, 5, 4]} mx={[2, 4, "10%"]}>
+        <TransparentCard
+          flexDirection="column"
+          m={2}
+          mt={[4, 5, 4]}
+          mx={[2, 4, "10%"]}
+        >
           <HeavyPurpleHeader mx="auto" my={3}>
             I manage...
           </HeavyPurpleHeader>
@@ -138,13 +143,23 @@ export const MainService = () => {
             <Offering src={Databases} title="Databases" />
           </Flex>
         </TransparentCard>
-        <TransparentCard flexDirection="column" m={2} mt={[4, 5, 4]} mx={[2, 4, "10%"]}>
+        <TransparentCard
+          flexDirection="column"
+          m={2}
+          mt={[4, 5, 4]}
+          mx={[2, 4, "10%"]}
+        >
           <HeavyPurpleHeader mx="auto" my={2}>
             I create...
           </HeavyPurpleHeader>
           <FourIconGroup icons={create} />
         </TransparentCard>
-        <TransparentCard flexDirection="column" m={2} mt={[4, 5, 4]} mx={[2, 4, "10%"]}>
+        <TransparentCard
+          flexDirection="column"
+          m={2}
+          mt={[4, 5, 4]}
+          mx={[2, 4, "10%"]}
+        >
           <HeavyPurpleHeader mx="auto" my={3}>
             I assist with...
           </HeavyPurpleHeader>
@@ -160,11 +175,16 @@ export const MainService = () => {
         </WhiteCard>
         <TransparentCard m={2} mt={[4, 5, 4]} mx={[2, 4, "10%"]}>
           <DarkText1>
-            To learn more about working with a Virtual Assistant, click here to
-            read the article The Top 10 Things To Know About Professional
-            Virtual Assistants on the AssistU website. For any lingering
-            questions, there’s also a comprehensive list of frequently asked
-            questions also located on the AssistU website here.
+            To learn more about working with a Virtual Assistant,{" "}
+            <a
+              href="https://www.workwithava.com/faq/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              click here
+            </a>{" "}
+            to read a full list of frequently asked questions on the AssistU
+            website.
           </DarkText1>
         </TransparentCard>
       </Flex>
